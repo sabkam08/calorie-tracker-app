@@ -29,7 +29,7 @@ Project documentation can be found in the following files:
 - 🏗️ [System Architecture (C4 Diagrams)](./ARCHITECTURE.md)
 
 ## Project Status
-🚧 This project is currently under development as part of a semester-long Software Engineering project.
+🚧 This project is currently under development.
 
 ## Author
 **Sabelo Kama**

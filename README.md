@@ -1,1 +1,1 @@
-# calorie-counter-app
+# calorie-tracker-app

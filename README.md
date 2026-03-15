@@ -5,7 +5,7 @@ The **Calorie Tracker App** is a full-stack web application designed to help use
 
 The application aims to simplify the process of nutritional tracking by providing a centralized platform where users can record meals, calculate calorie intake automatically, and visualize their dietary patterns.
 
-This project is being developed as part of a **Software Engineering assignment** and will demonstrate full-stack system design, including system specification, architecture modeling, and implementation.
+This project is being developed as part of a **Software Engineering Tutorial** and will demonstrate full-stack system design, including system specification, architecture modeling, and implementation.
 
 ## Core Features
 - Record daily meals

@@ -28,6 +28,13 @@ Project documentation can be found in the following files:
 - 📄 [System Specification](./SPECIFICATION.md)
 - 🏗️ [System Architecture (C4 Diagrams)](./ARCHITECTURE.md)
 
+### Assignment 4 Documentation
+- 🧩 [Stakeholder Analysis](./STAKEHOLDER_ANALYSIS.md)
+- 📘 [System Requirements Document](./SYSTEM_REQUIREMENTS.md)
+- 📝 [Reflection](./REFLECTION.md)
+
+These documents extend the original project work and capture the stakeholder concerns, functional requirements, non-functional requirements, and reflection required for Assignment 4.
+
 ## Project Status
 🚧 This project is currently under development.
 

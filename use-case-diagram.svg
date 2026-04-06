@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-labelledby="title desc">
+  <title id="title">Calorie Tracker App Use Case Diagram</title>
+  <desc id="desc">A UML-style use case diagram with stakeholders outside the system boundary and oval use cases inside the Calorie Tracker App boundary.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .banner { fill: #eef2f7; }
+      .footer { fill: #eef2f7; }
+      .system { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .usecase { fill: #fffdf2; stroke: #111827; stroke-width: 2; }
+      .actor { stroke: #111827; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .link { stroke: #111827; stroke-width: 2; fill: none; }
+      .dashed { stroke-dasharray: 7 6; }
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #111827; font-size: 18px; font-weight: 600; }
+      .small { font-family: Arial, Helvetica, sans-serif; fill: #111827; font-size: 15px; }
+      .system-title { font-family: Arial, Helvetica, sans-serif; fill: #111827; font-size: 22px; font-weight: 700; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; fill: #111827; font-size: 18px; font-weight: 600; }
+      .note { font-family: Arial, Helvetica, sans-serif; fill: #374151; font-size: 15px; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1500" height="900"/>
+  <rect class="banner" x="20" y="18" width="720" height="40" rx="2"/>
+  <text x="35" y="45" class="label" style="font-size:19px; font-weight:500;">Use Case Diagram of the Calorie Tracker App</text>
+
+  <rect class="system" x="400" y="95" width="720" height="590" rx="26"/>
+  <text x="760" y="130" text-anchor="middle" class="small" style="font-size:18px; font-weight:700;">&lt;&lt;System&gt;&gt;</text>
+  <text x="760" y="158" text-anchor="middle" class="system-title">Calorie Tracker App</text>
+
+  <!-- Left-side actors -->
+  <g transform="translate(120,165)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="0" y="108" text-anchor="middle" class="subtitle">Fitness</text>
+    <text x="0" y="128" text-anchor="middle" class="subtitle">Enthusiast</text>
+  </g>
+
+  <g transform="translate(120,315)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="0" y="108" text-anchor="middle" class="subtitle">Professional</text>
+    <text x="0" y="128" text-anchor="middle" class="subtitle">Athlete</text>
+  </g>
+
+  <g transform="translate(120,465)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="0" y="108" text-anchor="middle" class="subtitle">Nutritionist</text>
+  </g>
+
+  <g transform="translate(120,615)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="0" y="108" text-anchor="middle" class="subtitle">Fitness</text>
+    <text x="0" y="128" text-anchor="middle" class="subtitle">Coach</text>
+  </g>
+
+  <!-- Right-side actors -->
+  <g transform="translate(1280,150)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="46" y="8" class="subtitle">Personal Chef</text>
+  </g>
+
+  <g transform="translate(1280,280)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="46" y="8" class="subtitle">Fitness Researcher</text>
+  </g>
+
+  <g transform="translate(1280,410)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="46" y="8" class="subtitle">Software Developer</text>
+  </g>
+
+  <g transform="translate(1280,540)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="46" y="8" class="subtitle">Data Provider</text>
+  </g>
+
+  <g transform="translate(1280,670)">
+    <circle class="actor" cx="0" cy="0" r="16"/>
+    <line class="actor" x1="0" y1="16" x2="0" y2="56"/>
+    <line class="actor" x1="-20" y1="30" x2="20" y2="30"/>
+    <line class="actor" x1="0" y1="56" x2="-16" y2="82"/>
+    <line class="actor" x1="0" y1="56" x2="16" y2="82"/>
+    <text x="46" y="8" class="subtitle">Nutrition NGO</text>
+  </g>
+
+  <!-- Use cases -->
+  <ellipse id="uc1" class="usecase" cx="555" cy="215" rx="95" ry="30"/>
+  <ellipse id="uc2" class="usecase" cx="800" cy="215" rx="95" ry="30"/>
+  <ellipse id="uc11" class="usecase" cx="1045" cy="215" rx="95" ry="30"/>
+
+  <ellipse id="uc3" class="usecase" cx="555" cy="340" rx="95" ry="30"/>
+  <ellipse id="uc4" class="usecase" cx="800" cy="340" rx="95" ry="30"/>
+  <ellipse id="uc5" class="usecase" cx="1045" cy="340" rx="95" ry="30"/>
+
+  <ellipse id="uc6" class="usecase" cx="555" cy="465" rx="95" ry="30"/>
+  <ellipse id="uc7" class="usecase" cx="800" cy="465" rx="95" ry="30"/>
+  <ellipse id="uc8" class="usecase" cx="1045" cy="465" rx="95" ry="30"/>
+
+  <ellipse id="uc9" class="usecase" cx="640" cy="590" rx="120" ry="30"/>
+  <ellipse id="uc10" class="usecase" cx="980" cy="590" rx="130" ry="30"/>
+
+  <text x="555" y="220" text-anchor="middle" class="small">FR-01 Create Meal Log</text>
+  <text x="800" y="220" text-anchor="middle" class="small">FR-02 Search Food Items</text>
+  <text x="1045" y="220" text-anchor="middle" class="small">FR-12 Validate Input</text>
+
+  <text x="555" y="345" text-anchor="middle" class="small">FR-03 View Daily Totals</text>
+  <text x="800" y="345" text-anchor="middle" class="small">FR-04 Remaining Calories</text>
+  <text x="1045" y="345" text-anchor="middle" class="small">FR-05 View Meal History</text>
+
+  <text x="555" y="470" text-anchor="middle" class="small">FR-06 Edit / Delete Meal</text>
+  <text x="800" y="470" text-anchor="middle" class="small">FR-07 Save Nutrition Goals</text>
+  <text x="1045" y="470" text-anchor="middle" class="small">FR-09 Generate Summaries</text>
+
+  <text x="640" y="595" text-anchor="middle" class="small">FR-10 Store Records</text>
+  <text x="980" y="595" text-anchor="middle" class="small">FR-11 Configure Deployment</text>
+
+  <!-- Actor to use case associations -->
+  <line class="link" x1="136" y1="165" x2="460" y2="215"/>
+  <line class="link" x1="136" y1="182" x2="710" y2="215"/>
+  <line class="link" x1="136" y1="315" x2="460" y2="340"/>
+  <line class="link" x1="136" y1="332" x2="705" y2="340"/>
+  <line class="link" x1="136" y1="465" x2="460" y2="340"/>
+  <line class="link" x1="136" y1="615" x2="460" y2="465"/>
+
+  <line class="link" x1="1264" y1="150" x2="1140" y2="215"/>
+  <line class="link" x1="1264" y1="150" x2="1140" y2="340"/>
+  <line class="link" x1="1264" y1="280" x2="1140" y2="340"/>
+  <line class="link" x1="1264" y1="410" x2="1140" y2="465"/>
+  <line class="link" x1="1264" y1="540" x2="845" y2="215"/>
+  <line class="link" x1="1264" y1="670" x2="1140" y2="465"/>
+
+  <!-- Include / extend relationships -->
+  <line class="link dashed" x1="555" y1="245" x2="800" y2="245"/>
+  <text x="675" y="235" text-anchor="middle" class="note">&lt;&lt;include&gt;&gt;</text>
+
+  <line class="link dashed" x1="565" y1="245" x2="1045" y2="245"/>
+  <text x="808" y="270" text-anchor="middle" class="note">&lt;&lt;include&gt;&gt;</text>
+
+  <line class="link dashed" x1="555" y1="370" x2="800" y2="370"/>
+  <text x="675" y="395" text-anchor="middle" class="note">&lt;&lt;extend&gt;&gt;</text>
+
+  <line class="link dashed" x1="1045" y1="370" x2="1045" y2="435"/>
+  <text x="975" y="415" text-anchor="middle" class="note">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- Footer strip -->
+  <rect class="footer" x="0" y="852" width="1500" height="48"/>
+  <text x="30" y="882" class="label" style="font-size:18px; font-weight:700;">Use Case Diagrams | Unified Modeling Language (UML)</text>
+</svg>
+

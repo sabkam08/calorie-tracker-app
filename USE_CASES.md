@@ -2,70 +2,11 @@
 
 ## 1. Use Case Diagram
 
-```mermaid
-graph TB
-    subgraph Actors
-        PU["👤 Primary User<br/>(Health-Conscious)"]
-        BP["👤 Busy Professional"]
-        NC["👥 Nutrition Coach"]
-        SA["⚙️ System Admin"]
-        Dev["👨‍💻 Developer"]
-        PO["📊 Product Owner"]
-    end
+The use case diagram is embedded below as an SVG image so it renders consistently without relying on Mermaid support.
 
-    subgraph "Core Use Cases"
-        CML["Create Meal Log"]
-        SFI["Search Food Items"]
-        VMI["Validate Input"]
-        VDT["View Daily Totals"]
-        DRC["Display Remaining<br/>Calories"]
-        VMH["View Meal History"]
-        EDM["Edit/Delete Meal"]
-        SNG["Save Goals"]
-        GSE["Generate Summaries<br/>& Export"]
-        CDE["Configure<br/>Environment"]
-        MDA["Maintain<br/>Documentation"]
-    end
+![Calorie Tracker App UML Use Case Diagram](use-case-diagram.svg)
 
-    %% Actor-to-Use Case Relationships
-    PU -->|initiates| CML
-    BP -->|initiates| CML
-    PU -->|depends on| SFI
-    BP -->|depends on| SFI
-    CML -->|includes| VMI
-    CML -->|includes| SFI
-    PU -->|views| VDT
-    BP -->|views| VDT
-    VDT -->|extends to| DRC
-    PU -->|performs| EDM
-    BP -->|performs| EDM
-    NC -->|reviews| VMH
-    PU -->|sets| SNG
-    NC -->|analyzes| GSE
-    PO -->|evaluates| GSE
-    SA -->|configures| CDE
-    Dev -->|maintains| MDA
-    PO -->|supports| MDA
-
-    %% Styling
-    style PU fill:#e1f5ff
-    style BP fill:#e1f5ff
-    style NC fill:#fff3e0
-    style SA fill:#f3e5f5
-    style Dev fill:#f3e5f5
-    style PO fill:#e8f5e9
-    style CML fill:#fff9c4
-    style SFI fill:#fff9c4
-    style VMI fill:#fff9c4
-    style VDT fill:#fff9c4
-    style DRC fill:#fff9c4
-    style VMH fill:#fff9c4
-    style EDM fill:#fff9c4
-    style SNG fill:#fff9c4
-    style GSE fill:#fff9c4
-    style CDE fill:#fff9c4
-    style MDA fill:#fff9c4
-```
+*Figure 1: UML use case diagram with actors outside the system boundary and use cases inside the Calorie Tracker App boundary.*
 
 ## 2. Detailed Actor Descriptions
 

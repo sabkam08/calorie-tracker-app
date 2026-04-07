@@ -31,6 +31,7 @@ Project documentation can be found in the following files:
 - 📘 [System Requirements Document](./SYSTEM_REQUIREMENTS.md)
 - 📚 [Use Case Overview & Diagram](./USE_CASES.md)
 - ✍️ [Use Case Specifications & Test Plan](./TEST_AND_USE_CASES.md)
+- 🗂️ [Agile Planning Document](./AGILE_PLANNING.md)
 - 🧠 [Reflection](./REFLECTION.md)
 
 ## Project Status

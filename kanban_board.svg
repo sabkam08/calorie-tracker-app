@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="780" viewBox="0 0 1800 780" role="img" aria-labelledby="title desc">
+  <title id="title">Calorie Tracker App Kanban Board</title>
+  <desc id="desc">A custom Kanban board with Backlog, Ready, In Progress, Review, Testing, Blocked, and Done columns.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .frame { fill: #ffffff; stroke: #d7dde8; stroke-width: 2; rx: 18; }
+      .header { fill: #243b53; }
+      .headerText { fill: #ffffff; font: 700 28px Arial, sans-serif; }
+      .colTitle { fill: #102a43; font: 700 20px Arial, sans-serif; }
+      .subtle { fill: #627d98; font: 14px Arial, sans-serif; }
+      .card { fill: #ffffff; stroke: #cbd2d9; stroke-width: 1.5; rx: 12; }
+      .cardText { fill: #102a43; font: 15px Arial, sans-serif; }
+      .label { font: 12px Arial, sans-serif; font-weight: 700; }
+      .backlog { fill: #d9e2ec; }
+      .ready { fill: #d9f0ff; }
+      .progress { fill: #ffe7c2; }
+      .review { fill: #efe0ff; }
+      .testing { fill: #def7e5; }
+      .blocked { fill: #ffd6d6; }
+      .done { fill: #d4edda; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="780"/>
+  <rect class="frame" x="20" y="20" width="1760" height="740"/>
+  <rect class="header" x="20" y="20" width="1760" height="82" rx="18"/>
+  <text class="headerText" x="50" y="72">Calorie Tracker App – Custom Kanban Board</text>
+  <text class="subtle" x="50" y="96">Workflow: Backlog → Ready → In Progress → Review → Testing → Blocked → Done</text>
+
+  <!-- Columns -->
+  <g transform="translate(35,130)">
+    <!-- helper function not available; manual columns -->
+    <g transform="translate(0,0)">
+      <rect class="card" x="0" y="0" width="240" height="600"/>
+      <text class="colTitle" x="18" y="34">Backlog</text>
+      <text class="subtle" x="18" y="58">Unscheduled work</text>
+      <rect class="card" x="18" y="84" width="204" height="78"/>
+      <rect class="backlog" x="18" y="84" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="100">US-012</text>
+      <text class="cardText" x="30" y="128">Barcode scanning</text>
+      <text class="subtle" x="30" y="148">Won’t-have</text>
+      <rect class="card" x="18" y="176" width="204" height="78"/>
+      <rect class="backlog" x="18" y="176" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="192">T-002</text>
+      <text class="cardText" x="30" y="220">Search API</text>
+      <text class="subtle" x="30" y="240">Backend task</text>
+    </g>
+
+    <g transform="translate(255,0)">
+      <rect class="card" x="0" y="0" width="240" height="600"/>
+      <text class="colTitle" x="18" y="34">Ready</text>
+      <text class="subtle" x="18" y="58">Refined for sprint</text>
+      <rect class="card" x="18" y="84" width="204" height="78"/>
+      <rect class="ready" x="18" y="84" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="100">T-001</text>
+      <text class="cardText" x="30" y="128">Search layout</text>
+      <text class="subtle" x="30" y="148">@frontend-dev</text>
+      <rect class="card" x="18" y="176" width="204" height="78"/>
+      <rect class="ready" x="18" y="176" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="192">T-005</text>
+      <text class="cardText" x="30" y="220">Meal log form</text>
+      <text class="subtle" x="30" y="240">@frontend-dev</text>
+    </g>
+
+    <g transform="translate(510,0)">
+      <rect class="card" x="0" y="0" width="240" height="600"/>
+      <text class="colTitle" x="18" y="34">In Progress</text>
+      <text class="subtle" x="18" y="58">Active development</text>
+      <rect class="card" x="18" y="84" width="204" height="78"/>
+      <rect class="progress" x="18" y="84" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="100">T-009</text>
+      <text class="cardText" x="30" y="128">Config &amp; secrets</text>
+      <text class="subtle" x="30" y="148">@devops</text>
+      <rect class="card" x="18" y="176" width="204" height="78"/>
+      <rect class="progress" x="18" y="176" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="192">T-006</text>
+      <text class="cardText" x="30" y="220">Meal persistence</text>
+      <text class="subtle" x="30" y="240">@backend-dev</text>
+    </g>
+
+    <g transform="translate(765,0)">
+      <rect class="card" x="0" y="0" width="240" height="600"/>
+      <text class="colTitle" x="18" y="34">Review</text>
+      <text class="subtle" x="18" y="58">Peer inspection</text>
+      <rect class="card" x="18" y="84" width="204" height="78"/>
+      <rect class="review" x="18" y="84" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="100">T-003</text>
+      <text class="cardText" x="30" y="128">Search results</text>
+      <text class="subtle" x="30" y="148">@frontend-dev</text>
+      <rect class="card" x="18" y="176" width="204" height="78"/>
+      <rect class="review" x="18" y="176" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="192">T-011</text>
+      <text class="cardText" x="30" y="220">Unit tests</text>
+      <text class="subtle" x="30" y="240">@qa-analyst</text>
+    </g>
+
+    <g transform="translate(1020,0)">
+      <rect class="card" x="0" y="0" width="240" height="600"/>
+      <text class="colTitle" x="18" y="34">Testing</text>
+      <text class="subtle" x="18" y="58">Validation stage</text>
+      <rect class="card" x="18" y="84" width="204" height="78"/>
+      <rect class="testing" x="18" y="84" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="100">T-012</text>
+      <text class="cardText" x="30" y="128">Smoke checks</text>
+      <text class="subtle" x="30" y="148">@qa-analyst</text>
+    </g>
+
+    <g transform="translate(1275,0)">
+      <rect class="card" x="0" y="0" width="240" height="600"/>
+      <text class="colTitle" x="18" y="34">Blocked</text>
+      <text class="subtle" x="18" y="58">Impeded work</text>
+      <rect class="card" x="18" y="84" width="204" height="78"/>
+      <rect class="blocked" x="18" y="84" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="100">T-008</text>
+      <text class="cardText" x="30" y="128">Remaining calories</text>
+      <text class="subtle" x="30" y="148">Waiting on goal logic</text>
+    </g>
+
+    <g transform="translate(1530,0)">
+      <rect class="card" x="0" y="0" width="240" height="600"/>
+      <text class="colTitle" x="18" y="34">Done</text>
+      <text class="subtle" x="18" y="58">Accepted and closed</text>
+      <rect class="card" x="18" y="84" width="204" height="78"/>
+      <rect class="done" x="18" y="84" width="204" height="24" rx="12"/>
+      <text class="label" x="30" y="100">T-010</text>
+      <text class="cardText" x="30" y="128">HTTPS notes</text>
+      <text class="subtle" x="30" y="148">Verified</text>
+    </g>
+  </g>
+</svg>
+

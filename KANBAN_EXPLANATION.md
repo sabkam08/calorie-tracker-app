@@ -1,9 +1,12 @@
 # Calorie Tracker App – Kanban Board Explanation
 
-## 1. Definition of Kanban
+## 1. Introduction
+This document explains the purpose and structure of the customized Kanban board used for the Calorie Tracker App. The board is derived from the selected GitHub Project template and is intended to support Agile delivery, traceability, and verification.
+
+## 2. Definition of Kanban
 A Kanban board is a visual work-management system used to represent the flow of tasks from initiation to completion. Work items are displayed as cards and moved across columns that correspond to the state of delivery. The purpose of the board is to make work visible, expose bottlenecks early, and support continuous delivery.
 
-## 2. Project Board Overview
+## 3. Project Board Overview
 
 The Calorie Tracker App uses a customized Kanban board derived from the selected GitHub Project template. The board is intended to track requirements-driven work items from the Agile backlog through implementation, validation, and completion.
 
@@ -11,7 +14,7 @@ The Calorie Tracker App uses a customized Kanban board derived from the selected
 
 *Figure 1: Custom Kanban board showing the project workflow from backlog to completion.*
 
-## 3. Board Structure
+## 4. Board Structure
 
 | Column | Function | Typical Items |
 |---|---|---|
@@ -23,7 +26,7 @@ The Calorie Tracker App uses a customized Kanban board derived from the selected
 | **Blocked** | Identifies work that cannot proceed due to a dependency or defect. | Tasks waiting on clarification, data, or technical resolution. |
 | **Done** | Records accepted and completed work. | Verified user stories, closed tasks, approved deliverables. |
 
-## 4. Work-in-Progress Policy
+## 5. Work-in-Progress Policy
 
 Work-in-progress limits are applied to preserve focus and prevent congestion.
 
@@ -34,7 +37,7 @@ Work-in-progress limits are applied to preserve focus and prevent congestion.
 
 These limits are intended to keep work moving steadily rather than allowing too many partially completed items to accumulate.
 
-## 5. How the Board Visualizes Workflow
+## 6. How the Board Visualizes Workflow
 
 The board visualizes workflow by placing each item in a single, clearly defined state. As the task matures, the card is moved from left to right across the board.
 
@@ -48,7 +51,7 @@ The board visualizes workflow by placing each item in a single, clearly defined 
 
 This progression makes the current status of each task immediately visible to all stakeholders.
 
-## 6. Relationship to Agile Principles
+## 7. Relationship to Agile Principles
 
 The board supports Agile delivery in several ways:
 
@@ -58,7 +61,7 @@ The board supports Agile delivery in several ways:
 - **Feedback-driven improvement:** review and testing stages provide opportunities to correct defects before completion.
 - **Predictable flow:** WIP limits help the team avoid bottlenecks and maintain throughput.
 
-## 7. Alignment with Project Requirements
+## 8. Alignment with Project Requirements
 
 The board structure directly supports the functional and non-functional requirements defined earlier in the documentation.
 
@@ -68,7 +71,7 @@ The board structure directly supports the functional and non-functional requirem
 - **Blocked tracking** ensures that dependency-related delays are visible rather than hidden.
 - **Security and deployment tasks** remain on the same board as feature work, which reinforces the principle that technical readiness is part of product delivery.
 
-## 8. Issue and Assignment Conventions
+## 9. Issue and Assignment Conventions
 
 Each board card should correspond to a GitHub issue linked to a user story or implementation task. The issue should include:
 
@@ -81,7 +84,7 @@ Each board card should correspond to a GitHub issue linked to a user story or im
 
 This convention ensures that the project board is not only visual but also traceable to the documented requirements.
 
-## 9. Conclusion
+## 10. Conclusion
 
 The customized Kanban board provides a practical and disciplined method for managing the Calorie Tracker App. It improves visibility, limits work overload, and supports the project’s Agile workflow from planning through verification.
 

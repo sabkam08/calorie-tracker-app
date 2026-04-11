@@ -32,8 +32,9 @@ Project documentation can be found in the following files:
 - 📚 [Use Case Overview & Diagram](./USE_CASES.md)
 - ✍️ [Use Case Specifications & Test Plan](./TEST_AND_USE_CASES.md)
 - 🗂️ [Agile Planning Document](./AGILE_PLANNING.md)
-- 📌 [GitHub Project Template Analysis](TEMPLATE_ANALYSIS.md)
-- 📋 [Kanban Board Explanation](KANBAN_EXPLANATION.md)
+- 📌 [GitHub Project Template Analysis](./TEMPLATE_ANALYSIS.md)
+- 🖼️ [Template Comparison Figure](./template_comparison.svg)
+- 📋 [Kanban Board Explanation](./KANBAN_EXPLANATION.md)
 - 🖼️ [Kanban Board Illustration](./kanban_board.svg)
 - 🧠 [Reflection](./REFLECTION.md)
 
@@ -42,6 +43,7 @@ Project documentation can be found in the following files:
 The repository also includes documentation for the GitHub Projects workflow used to support Agile delivery of the Calorie Tracker App.
 
 - The **template analysis** compares the available GitHub Project templates and justifies the selected approach.
+- The **template comparison figure** provides a visual summary of the template options discussed in the report.
 - The **Kanban explanation** describes the custom board structure, work-in-progress limits, and workflow logic.
 - The **Kanban board illustration** is provided as an SVG asset and can be embedded in the project documentation or repository README.
 

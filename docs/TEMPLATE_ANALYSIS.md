@@ -5,7 +5,7 @@ This document evaluates the GitHub Projects templates available for Agile work m
 
 ## 2. Template Comparison Figure
 
-![GitHub Project Template Comparison](./template_comparison.svg)
+![GitHub Project Template Comparison](template_comparison.svg)
 
 *Figure 1: Visual summary of the GitHub Project templates considered for the Calorie Tracker App.*
 

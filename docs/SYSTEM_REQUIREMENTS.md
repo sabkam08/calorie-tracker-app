@@ -1,6 +1,6 @@
 # Calorie Tracker App – System Requirements Document (SRD)
 
-## 1. Introduction
+## 1. System Summary
 The Calorie Tracker App is a full-stack web application that helps users log meals, calculate daily calorie intake, and review nutrition patterns over time. This SRD defines the functional and non-functional requirements for the system and traces them to stakeholder needs.
 
 ## 2. Scope

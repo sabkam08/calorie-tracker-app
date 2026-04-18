@@ -10,7 +10,7 @@ A Kanban board is a visual work-management system used to represent the flow of 
 
 The Calorie Tracker App uses a customized Kanban board derived from the selected GitHub Project template. The board is intended to track requirements-driven work items from the Agile backlog through implementation, validation, and completion.
 
-![Custom Kanban Board for the Calorie Tracker App](./kanban_board.svg)
+![Custom Kanban Board for the Calorie Tracker App](kanban_board.svg)
 
 *Figure 1: Custom Kanban board showing the project workflow from backlog to completion.*
 

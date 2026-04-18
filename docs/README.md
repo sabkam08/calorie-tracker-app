@@ -25,18 +25,18 @@ This project is being developed as part of a **Software Engineering Tutorial** a
 
 Project documentation can be found in the following files:
 
-- 📄 [System Specification](./SPECIFICATION.md)
-- 🏗️ [System Architecture (C4 Diagrams)](./ARCHITECTURE.md)
-- 🧩 [Stakeholder Analysis](./STAKEHOLDER_ANALYSIS.md)
-- 📘 [System Requirements Document](./SYSTEM_REQUIREMENTS.md)
-- 📚 [Use Case Overview & Diagram](./USE_CASES.md)
-- ✍️ [Use Case Specifications & Test Plan](./TEST_AND_USE_CASES.md)
-- 🗂️ [Agile Planning Document](./AGILE_PLANNING.md)
-- 📌 [GitHub Project Template Analysis](./TEMPLATE_ANALYSIS.md)
-- 🖼️ [Template Comparison Figure](./template_comparison.svg)
-- 📋 [Kanban Board Explanation](./KANBAN_EXPLANATION.md)
-- 🖼️ [Kanban Board Illustration](./kanban_board.svg)
-- 🧠 [Reflection](./REFLECTION.md)
+- 📄 [System Specification](SPECIFICATION.md)
+- 🏗️ [System Architecture (C4 Diagrams)](ARCHITECTURE.md)
+- 🧩 [Stakeholder Analysis](STAKEHOLDER_ANALYSIS.md)
+- 📘 [System Requirements Document](SYSTEM_REQUIREMENTS.md)
+- 📚 [Use Case Overview & Diagram](USE_CASES.md)
+- ✍️ [Use Case Specifications & Test Plan](TEST_AND_USE_CASES.md)
+- 🗂️ [Agile Planning Document](AGILE_PLANNING.md)
+- 📌 [GitHub Project Template Analysis](TEMPLATE_ANALYSIS.md)
+- 🖼️ [Template Comparison Figure](template_comparison.svg)
+- 📋 [Kanban Board Explanation](KANBAN_EXPLANATION.md)
+- 🖼️ [Kanban Board Illustration](kanban_board.svg)
+- 🧠 [Reflection](REFLECTION.md)
 
 ## GitHub Project Documentation
 

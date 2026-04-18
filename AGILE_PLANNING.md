@@ -1,16 +1,16 @@
 # Calorie Tracker App – Agile Planning Document
 
 ## 1. Purpose
-This document translates the requirements captured in the markdown source files into actionable user stories, a prioritized product backlog, and a first sprint plan for the calorie-tracking app.
+This document presents the Agile delivery plan for the calorie‑tracking application. It converts documented stakeholder needs, functional requirements, and use cases into user stories, a prioritised product backlog, and a two‑week sprint plan targeting a minimum viable product (MVP).
 
 ## 2. Agile Tooling and Traceability Plan
-To demonstrate collaboration and traceability in GitHub:
+To maintain auditability from requirement → use case → story → task → test evidence, the following GitHub practices are used:
 
-- **GitHub Issues:** create one issue per user story using the story ID as the issue title prefix, for example `US-001 Search food items`.
-- **GitHub Projects:** move issues through `Backlog`, `Ready`, `In Progress`, `Review`, and `Done` columns.
-- **GitHub Milestones:** use `Sprint 1 – MVP`, `Sprint 2 – Expansion`, and `Release Candidate` milestones.
-- **Labels:** apply labels such as `feature`, `must-have`, `should-have`, `could-have`, `won't-have`, `FR-xx`, `UC-xx`, and `sprint-1`.
-- **Issue bodies:** include linked functional requirement IDs, use case IDs, acceptance criteria, and test references so every story remains traceable.
+- **GitHub Issues:** one issue per user story using the story ID as the title prefix (e.g., `US-001 Search food items`).
+- **GitHub Projects:** track flow through `Backlog`, `Ready`, `In Progress`, `Review`, and `Done`.
+- **GitHub Milestones:** group delivery into time‑boxed milestones (e.g., `Sprint 1 – MVP`).
+- **Labels:** apply consistent tags for type and traceability (e.g., `feature`, `bug`, MoSCoW labels, plus `FR-xx`, `UC-xx`, `sprint-1`).
+- **Issue body template:** include requirement/use‑case references, acceptance criteria, and test links so that each story is independently verifiable.
 
 ## 3. Traceability Matrix
 
@@ -30,6 +30,8 @@ To demonstrate collaboration and traceability in GitHub:
 | US-012 | Scope note from `SYSTEM_REQUIREMENTS.md` | None in current scope | Future barcode scanning enhancement |
 
 ## 4. User Stories
+
+All user stories follow the format “As a [role], I want [action] so that [benefit]” and are written to satisfy INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable). Acceptance criteria are phrased as observable system behaviours to support verification.
 
 | Story ID | User Story | Acceptance Criteria | Priority |
 |---|---|---|---|
@@ -64,12 +66,12 @@ To demonstrate collaboration and traceability in GitHub:
 | 12 | US-012 | Barcode scanning for packaged foods | Won’t-have | 5 | Future scanning service | The current scope does not include barcode scanning, so this remains a future enhancement. |
 
 ### Prioritization Rationale
-The first six backlog items are ranked as **Must-have** because they deliver the smallest complete and safe MVP: search, validate, log, view progress, deploy, and protect the system. These items directly support the strongest stakeholder concerns for speed, accuracy, reliability, and security. The remaining **Should-have** stories improve review and correction workflows but are not required for the first working release. The **Could-have** and **Won’t-have** items are explicitly deferred so the backlog stays realistic and focused.
+The first six items are prioritised as **Must‑have** because they form the smallest complete and safe MVP: search, validate, log, provide daily progress feedback, run reliably in a deployable environment, and protect user data. These items address the highest‑impact stakeholder concerns (speed, accuracy, reliability, and privacy/security). The **Should‑have** items improve review, correction, and professional workflows, but are not required to demonstrate a complete primary user journey. The **Could‑have** and **Won’t‑have** items are explicitly deferred to prevent scope dilution and to preserve delivery credibility.
 
 ## 6. Sprint 1 Plan
 
 ### Sprint Goal
-Deliver a working MVP that allows a user to search for food items, validate input, log meals, and see today’s calorie totals in a deployable and secure environment.
+Deliver a working MVP in which a user can find a food item, submit a validated meal entry, and immediately view the impact on today’s calorie totals, with the system running in a documented, deployable, and secure configuration.
 
 ### Selected Sprint Stories
 - **US-001** Search for food items
@@ -97,7 +99,7 @@ Deliver a working MVP that allows a user to search for food items, validate inpu
 | T-012 | Run end-to-end smoke checks for meal entry and dashboard updates | US-002, US-004 | QA + Product Owner | 4 | To Do |
 
 ### How Sprint 1 Supports the MVP
-Sprint 1 focuses on the shortest path to visible user value. The user can find a food item, correct invalid data, save a meal, and immediately see today’s progress. The deployment and security stories ensure the MVP is not just functional in a mock-up, but also ready to run in a documented environment with safe handling of sensitive configuration.
+Sprint 1 targets the shortest path to measurable user value. The user can search for an item, correct invalid inputs, commit a meal entry, and immediately observe updated daily totals. The deployment and security work ensures the MVP is not only demonstrable, but also operationally credible: configuration is documented, persistence is reliable, and sensitive data is handled safely.
 
 ## 7. GitHub Collaboration Workflow
 
@@ -107,17 +109,17 @@ Sprint 1 focuses on the shortest path to visible user value. The user can find a
 4. **Attach the sprint milestone** to the six selected sprint stories.
 5. **Close issues with commit references** so the history stays traceable.
 
-This workflow keeps the backlog transparent and makes it easy to prove which requirements were implemented, tested, and reviewed.
+This workflow keeps work visible, supports disciplined change control, and provides evidence of which requirements were implemented, reviewed, and verified.
 
 ## 8. Reflection
-The hardest part of the planning work was not writing the stories themselves; it was deciding what **not** to pursue yet. When I looked at the backlog, I felt the pull to make everything sound important. It would have been easy to mark every item as critical and pretend that the app needed to do everything immediately. That temptation was the main resistance I had to overcome. Agile planning forced me to admit that value comes from sequence, not from volume.
+The most difficult aspect of planning was not drafting the stories; it was deciding what to defer. When reviewing the backlog, I felt a persistent internal pressure to treat every idea as urgent. It would have been easy to label all work as critical and produce an unrealistic plan. The primary resistance to overcome was the tendency to over‑promise scope. The planning discipline required accepting that value comes from sequencing and focus, not volume.
 
-Estimating effort was also uncomfortable because I had to judge size and complexity without the comfort of a team debate. Some items looked small at first but became larger once I considered validation, persistence, and edge cases. Others looked technical but were actually straightforward once their scope was narrowed. I had to keep reminding myself that story points are not a promise; they are a shared language for uncertainty. That helped me avoid overconfidence and made the backlog more honest.
+Effort estimation was also challenging because size and complexity had to be judged without team calibration. Several items appeared small until validation rules, persistence concerns, and edge cases were considered. Conversely, some technical tasks became manageable once their boundaries were explicitly defined. I had to keep reinforcing that story points are not commitments; they are a structured way to communicate uncertainty. This reduced overconfidence and improved the credibility of the backlog.
 
-The biggest challenge was balancing user-facing work with enabling work. As a solo planner, I naturally wanted to prioritize visible features like searching food and logging meals because those feel rewarding and easy to explain. But a usable product also needs deployment setup, security, and traceable documentation. If I ignored those, I would have built something that looked complete on paper but would be fragile in practice. That tension between immediate gratification and practical readiness was difficult, but it improved the plan.
+The largest trade‑off was balancing visible user features with enabling work. As an individual planner, I was inclined to prioritise features that are easy to demonstrate (search and logging). However, a usable product also requires deployability, security controls, and traceable documentation. Neglecting these would create a system that appears complete during a demo but fails under realistic operation. Managing this tension between immediate gratification and operational readiness strengthened the sprint selection.
 
-I also noticed how difficult it is to keep stakeholder needs balanced when one person is making all the decisions. Even when I was thinking through the perspective of a fitness enthusiast, nutritionist, developer, or researcher, I still had to reduce each need to a realistic slice of work. That required resisting the urge to broaden the scope every time a new idea appeared. The more I thought about it, the more I saw Agile as a discipline of restraint: choosing the smallest release that still delivers meaningful value.
+It was also difficult to faithfully represent diverse stakeholder perspectives while making decisions alone. Even when considering the needs of a fitness enthusiast, a nutrition professional, a developer, or a researcher, each concern had to be reduced into a realistic increment of deliverable work. This required repeated refusal to expand scope whenever a new improvement suggested itself. Over time, the exercise clarified Agile planning as a discipline of restraint: selecting the smallest release that still delivers meaningful, verifiable value.
 
-If I had to do this again, I would spend even more time validating the dependencies before ranking the backlog. The process showed me that good Agile planning is not about making the backlog as long as possible; it is about making it clear enough that a sprint can start with confidence. That clarity is what turns requirements into progress.
+If repeating the planning cycle, I would invest additional time validating dependencies before ranking work. The process reinforced that effective Agile planning is not measured by backlog length; it is measured by clarity and readiness. That clarity is what turns documented intent into executable work.
 
 

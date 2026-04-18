@@ -4,35 +4,39 @@
 The Calorie Tracker App is a full-stack web application that helps users log meals, calculate daily calorie intake, and review nutrition patterns over time. This SRD defines the functional and non-functional requirements for the system and traces them to stakeholder needs.
 
 ## 2. Scope
-The system will support meal logging, calorie calculation, daily summaries, nutrition history, and basic account/profile management within the current project scope. Advanced features such as wearable-device integration, barcode scanning, or AI-based meal suggestions are outside the current assignment scope unless added later.
+The system will support meal logging, calorie calculation, daily summaries, nutrition history, and basic account/profile management within the current project scope. Advanced features such as wearable-device integration, barcode scanning, or AI-based meal suggestions are outside the current project scope unless added later.
 
 ## 3. Stakeholder-to-Requirement Traceability
 | Stakeholder | Main Requirement Areas |
 |---|---|
-| Primary User / Health-Conscious Individual | Meal logging, calorie totals, summaries, usability |
-| Busy Student or Working Professional | Fast entry, responsive interface, recent meals |
-| Nutrition Coach / Wellness Advisor | History views, weekly summaries, exportable data |
-| Project Developer / Maintainer | Modularity, documentation, testing, maintainability |
-| Course Instructor / Assessor | Traceability, clarity, completeness, documentation quality |
-| System Administrator / Host Operator | Deployment, monitoring, configuration, uptime |
-| Future Product Owner / Potential Client | Extensibility, scalability, roadmap readiness |
+| Fitness Enthusiast | Meal logging, calorie totals, summaries, usability, fast entry |
+| Professional Athlete | Precise calorie and macro tracking, performance-oriented summaries, accuracy |
+| Nutritionist | History views, weekly summaries, exportable data, client guidance |
+| Advertiser | Engagement analytics, visibility options, future monetization support |
+| Data Provider | Food data integrity, API stability, compliant data usage |
+| Software Developer | Modularity, documentation, testing, maintainability, deployment configuration |
+| Personal Chef | Recipe-related meal planning, portion tracking, dietary restriction support |
+| Fitness Coach | Progress tracking, history views, client support, goal monitoring |
+| Nutrition NGOs | Anonymized insights, accessibility, public-health reporting support |
+| Healthy Food Supplier | Product visibility, partner integration, nutrition-aware commerce support |
+| Fitness Researcher | Aggregated trends, anonymized data, exportable research outputs |
 
 ## 4. Functional Requirements
 
 | ID | Requirement | Primary Stakeholder(s) | Acceptance Criteria |
 |---|---|---|---|
-| FR-01 | The system shall allow users to create a meal log by entering a meal type, food item name, portion size, and meal date/time. | Primary User, Busy Student | A logged meal is saved successfully and appears in the user's meal history with all entered details. |
-| FR-02 | The system shall calculate the calorie total for each logged meal automatically based on the selected food item and portion size. | Primary User, Nutrition Coach | The meal total is updated immediately after saving, and the displayed value matches the stored calculation. |
-| FR-03 | The system shall display the user's total calories consumed for the current day. | Primary User, Busy Student | The daily total updates after each meal entry and reflects all meals recorded for that day. |
-| FR-04 | The system shall display remaining calories against the user's daily calorie goal. | Primary User, Nutrition Coach | The remaining calories value equals goal minus consumed calories and changes whenever the daily total changes. |
-| FR-05 | The system shall allow users to view meal history by day, week, and custom date range. | Primary User, Nutrition Coach | The selected range returns the correct logs and totals for the chosen period. |
-| FR-06 | The system shall allow users to edit or delete an existing meal log. | Primary User, Project Developer | Edited or deleted entries are reflected immediately in history and summary totals. |
-| FR-07 | The system shall allow users to search for food items by name and filter results by matching terms. | Primary User, Busy Student | Search results display relevant matches and exclude unrelated items for the entered keyword. |
-| FR-08 | The system shall allow users to save personal nutrition goals such as daily calorie target. | Primary User, Nutrition Coach | A saved goal is persisted and used in future summary calculations. |
-| FR-09 | The system shall generate a daily and weekly summary of calorie intake and meal activity. | Nutrition Coach, Course Instructor | Summary views show total calories, number of meals, and trend information for the selected period. |
-| FR-10 | The system shall store nutrition records in a PostgreSQL database. | Project Developer, System Administrator | Logged meals persist after a refresh or new session and are retrievable from the database. |
-| FR-11 | The system shall allow an administrator or maintainer to configure application settings through environment variables. | System Administrator, Project Developer | Documented environment variables are sufficient to run the app in a new deployment environment. |
-| FR-12 | The system shall provide clear validation messages when a user submits incomplete or invalid meal data. | Primary User, Course Instructor | Invalid fields are flagged before submission or on submit, and the user can correct the data without losing the form context. |
+| FR-01 | The system shall allow users to create a meal log by entering a meal type, food item name, portion size, and meal date/time. | Fitness Enthusiast, Personal Chef, Fitness Coach | A logged meal is saved successfully and appears in the user's meal history with all entered details. |
+| FR-02 | The system shall calculate the calorie total for each logged meal automatically based on the selected food item and portion size. | Fitness Enthusiast, Professional Athlete, Nutritionist | The meal total is updated immediately after saving, and the displayed value matches the stored calculation. |
+| FR-03 | The system shall display the user's total calories consumed for the current day. | Fitness Enthusiast, Professional Athlete, Fitness Coach | The daily total updates after each meal entry and reflects all meals recorded for that day. |
+| FR-04 | The system shall display remaining calories against the user's daily calorie goal. | Fitness Enthusiast, Fitness Coach, Professional Athlete | The remaining calories value equals goal minus consumed calories and changes whenever the daily total changes. |
+| FR-05 | The system shall allow users to view meal history by day, week, and custom date range. | Fitness Enthusiast, Nutritionist, Fitness Researcher | The selected range returns the correct logs and totals for the chosen period. |
+| FR-06 | The system shall allow users to edit or delete an existing meal log. | Fitness Enthusiast, Software Developer | Edited or deleted entries are reflected immediately in history and summary totals. |
+| FR-07 | The system shall allow users to search for food items by name and filter results by matching terms. | Fitness Enthusiast, Healthy Food Supplier | Search results display relevant matches and exclude unrelated items for the entered keyword. |
+| FR-08 | The system shall allow users to save personal nutrition goals such as daily calorie target. | Fitness Enthusiast, Fitness Coach, Nutritionist | A saved goal is persisted and used in future summary calculations. |
+| FR-09 | The system shall generate a daily and weekly summary of calorie intake and meal activity. | Nutritionist, Fitness Coach, Fitness Researcher, Nutrition NGOs | Summary views show total calories, number of meals, and trend information for the selected period. |
+| FR-10 | The system shall store nutrition records in a PostgreSQL database. | Software Developer, Data Provider | Logged meals persist after a refresh or new session and are retrievable from the database. |
+| FR-11 | The system shall allow an administrator or maintainer to configure application settings through environment variables. | Software Developer, Data Provider | Documented environment variables are sufficient to run the app in a new deployment environment. |
+| FR-12 | The system shall provide clear validation messages when a user submits incomplete or invalid meal data. | Fitness Enthusiast, Nutritionist, Personal Chef | Invalid fields are flagged before submission or on submit, and the user can correct the data without losing the form context. |
 
 ## 5. Non-Functional Requirements
 
@@ -74,6 +78,6 @@ The system will support meal logging, calorie calculation, daily summaries, nutr
 
 ## 6. Requirements Notes
 - Functional requirements are intentionally limited to the app’s current scope so they remain realistic for a semester project.
-- Non-functional requirements emphasize usability, deployability, maintainability, scalability, security, and performance because these are key grading criteria in the assignment rubric.
+- Non-functional requirements emphasize usability, deployability, maintainability, scalability, security, and performance because these are key evaluation criteria in the current documentation set.
 - Each requirement is written to be testable and traceable back to at least one stakeholder concern.
 

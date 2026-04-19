@@ -30,6 +30,13 @@ By comparison, **Trello** provides a similarly visual experience, but it is bett
 
 Overall, GitHub Projects offered a balanced middle ground because it integrated naturally with repository issues, labels, and assignments. This demonstrated that delivery management is not separate from requirements engineering; it is part of the same evidence chain.
 
+## Object State and Activity Workflow Reflection
+The state and activity modelling work required a careful balance between precision and readability. If the diagrams contained too much detail, they became difficult to interpret; if they were too abstract, they failed to explain meaningful behaviour. The most useful approach was to model the lifecycles that matter most to the application, such as meal entries, nutrition goals, summaries, exports, and deployment configuration, while keeping the transitions aligned with the documented requirements.
+
+Aligning the diagrams with the Agile artefacts also improved consistency across the repository. The state diagrams clarified how data objects evolve over time, whereas the activity diagrams clarified how users and the system cooperate during a task. This distinction was important because the two diagram types answer different questions: state diagrams explain what can happen to an object, while activity diagrams explain how a process unfolds from start to finish.
+
+The main challenge was ensuring that each diagram remained faithful to the current project scope. It was tempting to add additional states and branches for advanced functionality, but that would have weakened traceability to the existing requirements and made the documentation less coherent. Restricting the diagrams to the approved feature set produced a more formal and defensible result.
+
 ## Architecture Reflection
 `ARCHITECTURE.md` provided the structural view of the application and connected user-facing requirements to implementation concerns. Although the document is conceptual, it adds value by explaining how the interface, data flow, and persistence layers interact. The architectural view supports implementation planning and improves maintainability because it makes system boundaries more explicit.
 

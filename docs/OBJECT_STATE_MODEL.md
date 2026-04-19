@@ -2,9 +2,15 @@
 
 ## 1. Purpose and Scope
 
-This document models the lifecycle of key domain objects used by the Calorie Tracker App. The purpose of the state analysis is to make object behaviour explicit, strengthen traceability to the functional requirements, and support the transition from requirements analysis to design.
+This document presents the lifecycle of key domain objects used by the Calorie Tracker App. The analysis makes object behaviour explicit, strengthens traceability to the functional requirements, and supports the transition from requirements analysis to design.
 
-The models below focus on the core data objects and operational artefacts that recur throughout the application. Each state transition diagram highlights the principal states, the events that trigger state changes, and the functional requirements that the object lifecycle supports.
+The report includes a visual overview of the model below for quick reference.
+
+![Object State Model Overview](object-state-model.svg)
+
+*Figure 1: Overview of the principal object lifecycles and their traceability to functional requirements.*
+
+The model focuses on the core data objects and operational artefacts that recur throughout the application. Each state transition diagram highlights the principal states, the events that trigger state changes, and the functional requirements supported by the lifecycle.
 
 ## 2. Traceability Overview
 

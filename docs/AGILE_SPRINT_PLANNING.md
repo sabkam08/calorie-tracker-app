@@ -45,7 +45,7 @@ Sprint 1 targets the shortest path to measurable user value. The user can search
 This workflow keeps work visible, supports disciplined change control, and provides evidence of which requirements were implemented, reviewed, and verified.
 
 ## 7. Reflection
-The most difficult aspect of planning was not drafting the stories; it was deciding what to defer. When reviewing the backlog, I felt a persistent internal pressure to treat every idea as urgent. It would have been easy to label all work as critical and produce an unrealistic plan. The primary resistance to overcome was the tendency to over-promise scope. The planning discipline required accepting that value comes from sequencing and focus, not volume.
+The most difficult aspect of planning was not drafting the stories; it was deciding what to defer. When reviewing the backlog, I felt a persistent internal pressure to treat every idea as urgent. It would have been easy to label all work as critical and produce an unrealistic plan. The primary resistance to overcome was the tendency to over-promise scope. The planning discipline required accepting that value comes from sequencing and focus rather than volume.
 
 Effort estimation was also challenging because size and complexity had to be judged without team calibration. Several items appeared small until validation rules, persistence concerns, and edge cases were considered. Conversely, some technical tasks became manageable once their boundaries were explicitly defined. I had to keep reinforcing that story points are not commitments; they are a structured way to communicate uncertainty. This reduced overconfidence and improved the credibility of the backlog.
 

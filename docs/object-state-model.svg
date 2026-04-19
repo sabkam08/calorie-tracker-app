@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Calorie Tracker App - Object State Model Overview</title>
+  <desc id="desc">A visual summary of key object lifecycles, showing states, transitions, and traceability to functional requirements.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #334155; }
+      .section { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 18; }
+      .panel { fill: #eef2ff; stroke: #6366f1; stroke-width: 2; rx: 14; }
+      .panel2 { fill: #ecfeff; stroke: #06b6d4; stroke-width: 2; rx: 14; }
+      .panel3 { fill: #f0fdf4; stroke: #22c55e; stroke-width: 2; rx: 14; }
+      .panel4 { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 14; }
+      .header { font: 700 20px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 400 15px Arial, sans-serif; fill: #1e293b; }
+      .small { font: 400 13px Arial, sans-serif; fill: #475569; }
+      .label { font: 700 14px Arial, sans-serif; fill: #0f172a; }
+      .arrow { stroke: #475569; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .dashed { stroke-dasharray: 8 6; }
+      .req { fill: #fff; stroke: #94a3b8; stroke-width: 1.5; rx: 10; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#475569" />
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1400" height="900" />
+  <text class="title" x="70" y="70">Calorie Tracker App – Object State Model Overview</text>
+  <text class="subtitle" x="70" y="100">Visual export of the primary object lifecycles used across meal logging, search, goals, summaries, exports, and deployment configuration.</text>
+
+  <rect class="section" x="50" y="140" width="1300" height="690" rx="20" />
+  <text class="header" x="80" y="185">Lifecycle Grouping</text>
+
+  <rect class="panel" x="80" y="220" width="280" height="145" />
+  <text class="label" x="105" y="252">Meal Log Entry</text>
+  <text class="body" x="105" y="280">Draft → Validated → Saved</text>
+  <text class="small" x="105" y="305">Edited and Deleted states</text>
+  <text class="small" x="105" y="330">FR-01, FR-02, FR-06, FR-12</text>
+
+  <rect class="panel2" x="410" y="220" width="280" height="145" />
+  <text class="label" x="435" y="252">Food Search Request</text>
+  <text class="body" x="435" y="280">Idle → Submitted → Querying</text>
+  <text class="small" x="435" y="305">ResultsAvailable / NoResults</text>
+  <text class="small" x="435" y="330">FR-07, FR-12</text>
+
+  <rect class="panel3" x="740" y="220" width="280" height="145" />
+  <text class="label" x="765" y="252">Nutrition Goal</text>
+  <text class="body" x="765" y="280">Unset → DraftGoal → Active</text>
+  <text class="small" x="765" y="305">Updated and Reset transitions</text>
+  <text class="small" x="765" y="330">FR-08, FR-04</text>
+
+  <rect class="panel4" x="1070" y="220" width="250" height="145" />
+  <text class="label" x="1095" y="252">Daily Summary</text>
+  <text class="body" x="1095" y="280">NotGenerated → Generating</text>
+  <text class="small" x="1095" y="305">Available / Failed / Refreshed</text>
+  <text class="small" x="1095" y="330">FR-03, FR-04, FR-09</text>
+
+  <path class="arrow" d="M360 292 L405 292" />
+  <path class="arrow" d="M690 292 L735 292" />
+  <path class="arrow" d="M1020 292 L1065 292" />
+
+  <rect class="panel" x="80" y="430" width="280" height="145" />
+  <text class="label" x="105" y="462">Meal History Query</text>
+  <text class="body" x="105" y="490">Idle → Configured → Running</text>
+  <text class="small" x="105" y="515">ResultSetReady / EmptyResult</text>
+  <text class="small" x="105" y="540">FR-05, FR-09</text>
+
+  <rect class="panel2" x="410" y="430" width="280" height="145" />
+  <text class="label" x="435" y="462">Export Report</text>
+  <text class="body" x="435" y="490">Requested → Preparing → Ready</text>
+  <text class="small" x="435" y="515">Downloaded / Expired / Failed</text>
+  <text class="small" x="435" y="540">FR-09</text>
+
+  <rect class="panel3" x="740" y="430" width="280" height="145" />
+  <text class="label" x="765" y="462">User Profile Record</text>
+  <text class="body" x="765" y="490">Incomplete → Active → Updated</text>
+  <text class="small" x="765" y="515">Flagged and Archived states</text>
+  <text class="small" x="765" y="540">FR-08, FR-12</text>
+
+  <rect class="panel4" x="1070" y="430" width="250" height="145" />
+  <text class="label" x="1095" y="462">Deployment Config</text>
+  <text class="body" x="1095" y="490">Unconfigured → Validated</text>
+  <text class="small" x="1095" y="515">Deployed / Misconfigured</text>
+  <text class="small" x="1095" y="540">FR-10, FR-11</text>
+
+  <path class="arrow" d="M360 502 L405 502" />
+  <path class="arrow" d="M690 502 L735 502" />
+  <path class="arrow" d="M1020 502 L1065 502" />
+
+  <rect class="req" x="80" y="620" width="1190" height="170" />
+  <text class="header" x="105" y="655">Traceability summary</text>
+  <text class="body" x="105" y="685">Each lifecycle supports one or more functional requirements and reflects the same operational flow used in the use cases and test cases.</text>
+  <text class="small" x="105" y="715">Meal entry supports validation, persistence, and correction.</text>
+  <text class="small" x="105" y="742">Search and history objects support lookup, review, and reporting.</text>
+  <text class="small" x="105" y="769">Goal, summary, export, and deployment objects support dashboard logic, output generation, and reliable setup.</text>
+</svg>
+

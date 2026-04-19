@@ -32,7 +32,9 @@ Project documentation can be found in the following files:
 - 📚 [Use Case Overview & Diagram](USE_CASES.md)
 - ✍️ [Use Case Specifications & Test Plan](TEST_AND_USE_CASES.md)
 - 🧭 [Object State Model](OBJECT_STATE_MODEL.md)
+- 🖼️ [Object State Model Figure](object-state-model.svg)
 - 🔄 [Activity Workflow Model](ACTIVITY_WORKFLOW_MODEL.md)
+- 🖼️ [Activity Workflow Model Figure](activity-workflow-model.svg)
 - 🗂️ [Agile Planning Document](AGILE_PLANNING.md)
 - 📌 [GitHub Project Template Analysis](TEMPLATE_ANALYSIS.md)
 - 🖼️ [Template Comparison Figure](template_comparison.svg)
@@ -50,6 +52,7 @@ The repository also includes documentation for the GitHub Projects workflow used
 - The **Kanban board illustration** is provided as an SVG asset and can be embedded in the project documentation or repository README.
 - The **object state model** documents key lifecycle transitions for core application artefacts.
 - The **activity workflow model** describes the principal operational flows using UML-style diagrams.
+- The **SVG figures** provide visual exports of the two behavioural models for direct embedding and easy review.
 
 ## Project Status
 🚧 This project is currently under development.

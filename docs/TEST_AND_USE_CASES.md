@@ -2,9 +2,9 @@
 
 ## 1. Purpose and Traceability
 
-This document connects the stakeholder concerns from `STAKEHOLDER_ANALYSIS.md` to the functional and non-functional requirements in `SYSTEM_REQUIREMENTS.md`, then translates them into UML use cases and test cases.
+This document connects the stakeholder concerns in `STAKEHOLDER_ANALYSIS.md` to the functional and non-functional requirements in `SYSTEM_REQUIREMENTS.md`, then translates them into UML use cases and test cases.
 
-The current project scope focuses on calorie tracking, meal logging, nutrition summaries, and deployment/maintenance support. Stakeholders such as advertisers and healthy food suppliers are retained in the analysis as future or indirect stakeholders, but they are not modeled as core initiating actors in the current semester scope.
+The current project scope focuses on calorie tracking, meal logging, nutrition summaries, and deployment or maintenance support. Stakeholders such as advertisers and healthy food suppliers are retained in the analysis as future or indirect stakeholders, but they are not modelled as core initiating actors in the current scope.
 
 ---
 
@@ -18,8 +18,8 @@ The current project scope focuses on calorie tracking, meal logging, nutrition s
 | Fitness Coach | High / Keep Informed | Wants consistent progress updates and shareable summaries. | UC-04, UC-07 | Core actor |
 | Personal Chef | Medium / Monitor | Uses summaries to align portions with nutrition targets. | UC-07 | Supporting actor |
 | Fitness Researcher | High / Keep Informed | Needs structured historical data for trend analysis. | UC-04, UC-07 | Supporting actor |
-| Software Developer | High / Manage Closely | Needs maintainable code, stable deployment, and clear docs. | UC-08 | Core support actor |
-| Data Provider | High / Keep Satisfied | Supplies food data accuracy and uptime for search/calculation. | UC-02, UC-01 | External system stakeholder |
+| Software Developer | High / Manage Closely | Needs maintainable code, stable deployment, and clear documentation. | UC-08 | Core support actor |
+| Data Provider | High / Keep Satisfied | Supplies food data accuracy and uptime for search and calculation. | UC-02, UC-01 | External system stakeholder |
 | Nutrition NGO | Medium / Keep Satisfied | Interested in evidence-based, aggregated public-health insights. | UC-07 | Indirect / future use |
 | Healthy Food Supplier | Medium / Monitor | Wants partnership visibility and product-relevant insights. | UC-07 | Indirect / future use |
 | Advertiser | High / Keep Satisfied | Cares about engagement and audience visibility. | Not core to current FRs | Out of current scope |

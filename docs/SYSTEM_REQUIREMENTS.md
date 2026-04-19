@@ -1,25 +1,25 @@
 # Calorie Tracker App – System Requirements Document (SRD)
 
 ## 1. System Summary
-The Calorie Tracker App is a full-stack web application that helps users log meals, calculate daily calorie intake, and review nutrition patterns over time. This SRD defines the functional and non-functional requirements for the system and traces them to stakeholder needs.
+The Calorie Tracker App is a full-stack web application that helps users log meals, calculate daily calorie intake, and review nutrition patterns over time. This document defines the functional and non-functional requirements for the system and traces them to stakeholder needs.
 
 ## 2. Scope
-The system will support meal logging, calorie calculation, daily summaries, nutrition history, and basic account/profile management within the current project scope. Advanced features such as wearable-device integration, barcode scanning, or AI-based meal suggestions are outside the current project scope unless added later.
+The system supports meal logging, calorie calculation, daily summaries, nutrition history, and basic account or profile management within the current project scope. Advanced features such as wearable-device integration, barcode scanning, or AI-based meal suggestions are outside the current scope unless added later.
 
 ## 3. Stakeholder-to-Requirement Traceability
 | Stakeholder | Main Requirement Areas |
 |---|---|
-| Fitness Enthusiast | Meal logging, calorie totals, summaries, usability, fast entry |
-| Professional Athlete | Precise calorie and macro tracking, performance-oriented summaries, accuracy |
-| Nutritionist | History views, weekly summaries, exportable data, client guidance |
-| Advertiser | Engagement analytics, visibility options, future monetization support |
-| Data Provider | Food data integrity, API stability, compliant data usage |
-| Software Developer | Modularity, documentation, testing, maintainability, deployment configuration |
-| Personal Chef | Recipe-related meal planning, portion tracking, dietary restriction support |
-| Fitness Coach | Progress tracking, history views, client support, goal monitoring |
-| Nutrition NGOs | Anonymized insights, accessibility, public-health reporting support |
-| Healthy Food Supplier | Product visibility, partner integration, nutrition-aware commerce support |
-| Fitness Researcher | Aggregated trends, anonymized data, exportable research outputs |
+| Fitness Enthusiast | Meal logging, calorie totals, summaries, usability, and fast entry |
+| Professional Athlete | Precise calorie and macro tracking, performance-oriented summaries, and accuracy |
+| Nutritionist | History views, weekly summaries, exportable data, and client guidance |
+| Advertiser | Engagement analytics, visibility options, and future monetization support |
+| Data Provider | Food data integrity, API stability, and compliant data usage |
+| Software Developer | Modularity, documentation, testing, maintainability, and deployment configuration |
+| Personal Chef | Recipe-related meal planning, portion tracking, and dietary restriction support |
+| Fitness Coach | Progress tracking, history views, client support, and goal monitoring |
+| Nutrition NGOs | Anonymized insights, accessibility, and public-health reporting support |
+| Healthy Food Supplier | Product visibility, partner integration, and nutrition-aware commerce support |
+| Fitness Researcher | Aggregated trends, anonymized data, and exportable research outputs |
 
 ## 4. Functional Requirements
 
@@ -77,7 +77,7 @@ The system will support meal logging, calorie calculation, daily summaries, nutr
 | NFR-P3 | Search results for common food queries shall appear within 2 seconds under normal operating conditions. | Search feedback is returned quickly enough for interactive use during meal entry. |
 
 ## 6. Requirements Notes
-- Functional requirements are intentionally limited to the app’s current scope so they remain realistic for a semester project.
-- Non-functional requirements emphasize usability, deployability, maintainability, scalability, security, and performance because these are key evaluation criteria in the current documentation set.
-- Each requirement is written to be testable and traceable back to at least one stakeholder concern.
+- Functional requirements are intentionally limited to the app’s current scope so they remain realistic for the project timeframe.
+- Non-functional requirements emphasize usability, deployability, maintainability, scalability, security, and performance because these are key evaluation criteria in the documentation set.
+- Each requirement is written to be testable and traceable to at least one stakeholder concern.
 

@@ -1,7 +1,7 @@
 # Calorie Tracker App – GitHub Project Template Analysis
 
 ## 1. Introduction
-This document evaluates the GitHub Projects templates available for Agile work management and identifies the template most appropriate for the Calorie Tracker App. The analysis is aligned with the sprint-based delivery approach defined in the project’s Agile planning document.
+This document evaluates the GitHub Projects templates available for Agile work management and identifies the template most appropriate for the Calorie Tracker App. The analysis is aligned with the sprint-based delivery approach defined in the project’s planning materials.
 
 ## 2. Template Comparison Figure
 
@@ -9,63 +9,16 @@ This document evaluates the GitHub Projects templates available for Agile work m
 
 *Figure 1: Visual summary of the GitHub Project templates considered for the Calorie Tracker App.*
 
-## 3. Evaluation Criteria
+## 3. Comparative Analysis of Available Templates
 
-The templates are assessed using four practical criteria:
-
-- **Workflow clarity:** how easily work can move from idea to completion.
-- **Automation support:** how much manual board maintenance is reduced.
-- **Traceability:** how well issues, labels, milestones, and reviews remain connected.
-- **Agile fit:** how well the template supports iterative delivery, visibility, and work-in-progress control.
-
-## 4. Template Profiles
-
-### 4.1 Basic Kanban
-**What it is:** A minimal project board that uses a simple visual flow such as **To Do → In Progress → Done**.
-
-**What it does:** It lets a team track work items across a lightweight sequence of stages without enforcing complex planning rules.
-
-**Competitive edge:** Its main advantage is simplicity. It is easy to understand, quick to configure, and useful for teams that want a low-friction board with minimal administration.
-
-**Fit for the Calorie Tracker App:** It is suitable for basic task visibility, but it offers limited support for sprint tracking, testing, and more detailed delivery control.
-
-### 4.2 Automated Kanban
-**What it is:** A structured Kanban-style template designed to support a continuous flow of work, often using **Backlog → Ready → In Progress → Review → Done**.
-
-**What it does:** It tracks issues through the delivery lifecycle and can automate movement or status changes when issues, pull requests, or labels change.
-
-**Competitive edge:** Its strongest advantage is workflow automation. It reduces manual board maintenance while preserving visibility and traceability across planning, implementation, review, and completion.
-
-**Fit for the Calorie Tracker App:** It is the strongest match because the project is issue-driven, sprint-oriented, and benefits from clear task progression, testing visibility, and low overhead.
-
-### 4.3 Bug Triage
-**What it is:** A template designed for managing defects, support requests, and issue escalation through a structured triage process.
-
-**What it does:** It supports classification, assignment, confirmation, and resolution of bugs, usually through columns such as **New → Needs Triage → Confirmed → In Progress → Done**.
-
-**Competitive edge:** Its main advantage is defect management discipline. It helps teams prioritise bugs quickly and maintain a clean support workflow.
-
-**Fit for the Calorie Tracker App:** It is useful only if the board becomes defect-heavy. For the current project, it is less suitable than a delivery-focused template because the emphasis is on planned feature work.
-
-### 4.4 Team Planning
-**What it is:** A planning-oriented template for coordinating work across a team, typically using **Backlog → Ready for Sprint → In Progress → Blocked → Done** with iteration views.
-
-**What it does:** It supports prioritisation, sprint coordination, milestone tracking, and visibility into blocked work.
-
-**Competitive edge:** Its advantage is stronger planning control. It is particularly useful when a project requires coordination across multiple contributors and more explicit sprint governance.
-
-**Fit for the Calorie Tracker App:** It is helpful from a planning perspective, but it is more process-heavy than necessary for a compact academic project that needs straightforward issue tracking and lightweight sprint flow.
-
-## 5. Comparative Analysis of Available Templates
-
-| Template | Key Benefits | Notable Drawbacks | Widely Adopted? | Agile Suitability |
+| Template | Typical Columns and Workflow | Automation Features | Agile Suitability | Relevance to the Calorie Tracker App |
 |---|---|---|---|---|
-| **Basic Kanban** | Simple to understand; fast to configure; low administrative effort. | Limited automation; less support for sprint rhythm, review stages, and traceability. | Yes, commonly used for small teams and personal boards. | Suitable for basic Agile visibility, but limited for richer sprint-based delivery. |
-| **Automated Kanban** | Strong workflow automation; good traceability; supports issue-based delivery and review stages. | Requires more setup than a basic board; can still be light on formal sprint reporting compared with planning-heavy tools. | Yes, widely used in modern software teams. | Highly suitable for Agile because it supports continuous flow, WIP control, and iterative delivery. |
-| **Bug Triage** | Excellent defect handling; clear prioritisation of fixes; good for support operations. | Less effective for feature-led planning; can overemphasise bugs over product delivery. | Yes, especially in maintenance and support environments. | Moderately suitable; best for defect management rather than primary Agile planning. |
-| **Team Planning** | Strong sprint organisation; clearer capacity planning; useful for blocked work and iterations. | More process-heavy; can feel complex for smaller projects. | Yes, frequently adopted by teams that want structured sprint planning. | Highly suitable for Agile planning, especially in multi-person sprint environments. |
+| **Basic Kanban** | A simple flow such as **To Do → In Progress → Done**. Items are moved manually. | Limited or no built-in automation. | Suitable for small teams that need a straightforward visual board. | Adequate for basic tracking, but too minimal for a project that requires sprint traceability, testing, and issue-based delivery. |
+| **Automated Kanban** | A structured flow such as **Backlog → Ready → In Progress → Review → Done**. | Can automate issue movement, status updates, and workflow transitions when issues or pull requests change state. | Strong fit for continuous delivery and incremental work. | Highly suitable because the project is issue-driven, sprint-oriented, and benefits from reduced manual board maintenance. |
+| **Bug Triage** | Usually organised around **New → Needs Triage → Confirmed → In Progress → Done**. | Strong for triage automation, labelling, and prioritisation of defects. | Best suited to maintenance-heavy or support-heavy environments. | Less suitable because the project is focused on planned feature delivery rather than large-scale defect management. |
+| **Team Planning** | Commonly uses **Backlog → Ready for Sprint → In Progress → Blocked → Done**, often combined with iteration views. | Supports planning, prioritisation, milestones, and team coordination. | Strong for sprint planning and multi-member delivery. | Useful from a planning perspective, but more process-heavy than necessary for a compact project. |
 
-## 6. Selected Template and Justification
+## 4. Selected Template and Justification
 
 The **Automated Kanban** template is the most suitable option for the Calorie Tracker App.
 
@@ -76,7 +29,7 @@ The **Automated Kanban** template is the most suitable option for the Calorie Tr
 4. **Support for quality assurance.** The board can be extended with **Testing** and **Blocked** columns, which are necessary for formal review and defect resolution.
 5. **Appropriate project scale.** The calorie tracker is a semester project with a limited scope. Automated Kanban provides sufficient structure without the complexity of enterprise planning tools.
 
-## 7. Custom Kanban Board Configuration
+## 5. Custom Kanban Board Configuration
 
 The project board should be adapted from the selected template using the following columns:
 
@@ -90,7 +43,7 @@ The project board should be adapted from the selected template using the followi
 | **Blocked** | Captures items that cannot proceed because of a dependency or defect. | No fixed limit, but each item must include an explanation. | The obstacle is removed and the task returns to the active flow. |
 | **Done** | Contains items that meet the definition of done and have been accepted. | No limit. | All criteria are complete, verified, and documented. |
 
-## 8. Issue Allocation Plan
+## 6. Issue Allocation Plan
 
 The sprint board should be populated with the tasks from `AGILE_PLANNING.md`. The following table shows how the initial items should be distributed across the project board.
 
@@ -109,7 +62,7 @@ The sprint board should be populated with the tasks from `AGILE_PLANNING.md`. Th
 | T-011 | Write unit tests for search, validation, and calorie calculation | US-001, US-002, US-003 | `qa`, `test`, `sprint-1` | Ready | @qa-analyst |
 | T-012 | Run end-to-end smoke checks for meal entry and dashboard updates | US-002, US-004 | `qa`, `acceptance`, `sprint-1` | Ready | @qa-analyst, @product-owner |
 
-## 9. Board Governance
+## 7. Board Governance
 
 To maintain consistency, each issue should include:
 - the linked story ID,
@@ -121,6 +74,6 @@ To maintain consistency, each issue should include:
 
 The board should be reviewed during sprint planning and updated during stand-ups or progress reviews. This approach supports transparency, preserves traceability, and keeps the work aligned with the documented requirements.
 
-## 10. Conclusion
+## 8. Conclusion
 
 The **Automated Kanban** template provides the best balance of simplicity, traceability, and workflow control for the Calorie Tracker App. It supports the project’s sprint structure, accommodates testing and blocker management, and creates a clear operational link between requirements, issues, and delivery status.

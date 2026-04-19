@@ -11,7 +11,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 ## 2. Detailed Actor Descriptions
 
 ### Fitness Enthusiast
-- **Role:** Primary end-user who logs meals and tracks daily nutrition progress.
+- **Role:** Primary end user who logs meals and tracks daily nutrition progress.
 - **Concerns:** Ease of use, fast entry, habit tracking, and clear progress feedback.
 - **Interactions:** Meal logging, viewing summaries, editing entries, setting goals.
 - **Success Metrics:** Meal entry completed in under one minute; totals update immediately.
@@ -53,7 +53,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 - **Success Metrics:** Stable deployments, limited defects, and maintainable code structure.
 
 ### Data Provider
-- **Role:** External source supplying food and nutrition reference data.
+- **Role:** External source that supplies food and nutrition reference data.
 - **Concerns:** API stability, correct attribution, and compliant data usage.
 - **Interactions:** Supports search and calorie lookup workflows.
 - **Success Metrics:** Consistent data quality and dependable service availability.
@@ -82,26 +82,26 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 ### Inclusion Relationships (→ includes)
 **Create Meal Log → Search Food Items**
-- Every meal entry depends on finding the correct food item from the database
-- Ensures consistency: search always happens before calorie calculation
-- Supports FR-01 and FR-07 together
+- Every meal entry depends on locating the correct food item in the database.
+- This ensures that search occurs before calorie calculation.
+- Supports FR-01 and FR-07 together.
 
 **Create Meal Log → Validate Input**
-- Validation occurs as part of meal submission, not as a separate process
-- Prevents invalid entries before they reach the database
-- Addresses FR-12 (validation messages)
+- Validation occurs as part of meal submission rather than as a separate process.
+- This prevents invalid entries before they reach the database.
+- Addresses FR-12 (validation messages).
 
 ### Extension Relationships (→ extends to)
 **View Daily Totals ⟶ Display Remaining Calories**
-- Remaining calories appear as an extension of the totals view
-- Optional detail that appears when a user has set a goal
-- Ties FR-03 and FR-04 together in a natural workflow
+- Remaining calories appear as an extension of the totals view.
+- The detail appears only when a user has set a goal.
+- Ties FR-03 and FR-04 together in a natural workflow.
 
 ### Generalization Relationships (→ initiates)
 **Busy Professional generalizes Primary User**
-- Both follow the same core meal logging flow
-- Busy Professional emphasizes speed; Primary User emphasizes simplicity
-- Both can perform the same use cases but with different performance expectations
+- Both follow the same core meal logging flow.
+- Busy Professional emphasises speed, while Primary User emphasises simplicity.
+- Both can perform the same use cases but with different performance expectations.
 
 ---
 
@@ -111,11 +111,11 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 |---|---|---|
 | Fitness Enthusiast | Quick meal logging, accurate totals | Create Meal Log, View Daily Totals, Display Remaining Calories |
 | Professional Athlete | Precision, fast entry, reliable totals | Search Food Items, Create Meal Log, View Daily Totals |
-| Nutritionist | Reliable summaries, trend analysis | View Meal History, Generate Summaries & Export |
+| Nutritionist | Reliable summaries and trend analysis | View Meal History, Generate Summaries & Export |
 | Fitness Coach | Progress monitoring and actionable summaries | View Meal History, View Daily Totals, Generate Summaries & Export |
 | Personal Chef | Portion planning and dietary alignment | View Meal History, Generate Summaries & Export |
 | Fitness Researcher | Historical patterns and aggregated data | View Meal History, Generate Summaries & Export |
-| Software Developer | Clean architecture, maintainability | Configure Environment, Maintain Documentation |
+| Software Developer | Clean architecture and maintainability | Configure Environment, Maintain Documentation |
 | Data Provider | Stable data access and correct usage | Search Food Items, Create Meal Log |
 | Nutrition NGOs | Anonymised insight for public-health use | Generate Summaries & Export |
 | Healthy Food Supplier | Nutrition-aware product visibility | Generate Summaries & Export |

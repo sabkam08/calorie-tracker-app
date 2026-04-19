@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Calorie Tracker App - Activity Workflow Model Overview</title>
+  <desc id="desc">A visual summary of the principal activity workflows, showing user and system responsibilities, decision points, and reporting outputs.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #334155; }
+      .lane { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 18; }
+      .lanehead { fill: #e2e8f0; stroke: #94a3b8; stroke-width: 1.5; rx: 12; }
+      .card { fill: #eef2ff; stroke: #6366f1; stroke-width: 2; rx: 14; }
+      .card2 { fill: #ecfeff; stroke: #06b6d4; stroke-width: 2; rx: 14; }
+      .card3 { fill: #f0fdf4; stroke: #22c55e; stroke-width: 2; rx: 14; }
+      .card4 { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 14; }
+      .header { font: 700 20px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 400 15px Arial, sans-serif; fill: #1e293b; }
+      .small { font: 400 13px Arial, sans-serif; fill: #475569; }
+      .label { font: 700 14px Arial, sans-serif; fill: #0f172a; }
+      .arrow { stroke: #475569; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .dashed { stroke-dasharray: 8 6; }
+      .decision { fill: #fff; stroke: #64748b; stroke-width: 2; }
+      .note { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.5; rx: 10; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#475569" />
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1400" height="900" />
+  <text class="title" x="70" y="70">Calorie Tracker App – Activity Workflow Model Overview</text>
+  <text class="subtitle" x="70" y="100">Visual export of the main workflows showing user actions, system responses, decisions, and output generation.</text>
+
+  <rect class="lane" x="50" y="140" width="1300" height="690" rx="20" />
+  <text class="header" x="80" y="185">Primary workflow families</text>
+
+  <rect class="card" x="80" y="220" width="270" height="130" />
+  <text class="label" x="105" y="252">Search Food Items</text>
+  <text class="body" x="105" y="280">Validate input</text>
+  <text class="small" x="105" y="305">Query catalog → results or no-results</text>
+  <text class="small" x="105" y="330">FR-07, FR-12</text>
+
+  <rect class="card2" x="385" y="220" width="270" height="130" />
+  <text class="label" x="410" y="252">Create Meal Log</text>
+  <text class="body" x="410" y="280">Validate, calculate, store</text>
+  <text class="small" x="410" y="305">Update totals and confirm save</text>
+  <text class="small" x="410" y="330">FR-01, FR-02, FR-12</text>
+
+  <rect class="card3" x="690" y="220" width="270" height="130" />
+  <text class="label" x="715" y="252">View Daily Totals</text>
+  <text class="body" x="715" y="280">Summarise today's entries</text>
+  <text class="small" x="715" y="305">Calculate remaining calories if goal exists</text>
+  <text class="small" x="715" y="330">FR-03, FR-04</text>
+
+  <rect class="card4" x="995" y="220" width="300" height="130" />
+  <text class="label" x="1020" y="252">View Meal History</text>
+  <text class="body" x="1020" y="280">Select range and retrieve records</text>
+  <text class="small" x="1020" y="305">Support review and trend analysis</text>
+  <text class="small" x="1020" y="330">FR-05, FR-09</text>
+
+  <path class="arrow" d="M350 285 L380 285" />
+  <path class="arrow" d="M655 285 L685 285" />
+  <path class="arrow" d="M960 285 L990 285" />
+
+  <rect class="card" x="80" y="410" width="270" height="130" />
+  <text class="label" x="105" y="442">Edit / Delete Meal Log</text>
+  <text class="body" x="105" y="470">Load entry → confirm change</text>
+  <text class="small" x="105" y="495">Recalculate totals after update</text>
+  <text class="small" x="105" y="520">FR-06, FR-12</text>
+
+  <rect class="card2" x="385" y="410" width="270" height="130" />
+  <text class="label" x="410" y="442">Save Nutrition Goal</text>
+  <text class="body" x="410" y="470">Validate and persist target</text>
+  <text class="small" x="410" y="495">Refresh remaining-calorie display</text>
+  <text class="small" x="410" y="520">FR-08, FR-04</text>
+
+  <rect class="card3" x="690" y="410" width="270" height="130" />
+  <text class="label" x="715" y="442">Generate Summary &amp; Export</text>
+  <text class="body" x="715" y="470">Build totals and averages</text>
+  <text class="small" x="715" y="495">Create CSV or PDF output</text>
+  <text class="small" x="715" y="520">FR-05, FR-09</text>
+
+  <rect class="card4" x="995" y="410" width="300" height="130" />
+  <text class="label" x="1020" y="442">Deployment Configuration</text>
+  <text class="body" x="1020" y="470">Read environment values</text>
+  <text class="small" x="1020" y="495">Validate startup and persistence</text>
+  <text class="small" x="1020" y="520">FR-10, FR-11</text>
+
+  <path class="arrow" d="M350 475 L380 475" />
+  <path class="arrow" d="M655 475 L685 475" />
+  <path class="arrow" d="M960 475 L990 475" />
+
+  <rect class="note" x="80" y="600" width="1215" height="180" />
+  <text class="header" x="105" y="635">Behavioural summary</text>
+  <text class="body" x="105" y="665">The workflows model the system as a set of coordinated actions rather than isolated screens. Decisions occur where validation, availability, or selection state changes the flow.</text>
+  <text class="small" x="105" y="695">User tasks initiate the flow; the system validates, calculates, stores, and reports results.</text>
+  <text class="small" x="105" y="722">The workflows support daily tracking, correction, historical review, reporting, and deployment readiness.</text>
+  <text class="small" x="105" y="749">Parallel outputs are used where confirmation, refresh, or audit logic can continue without delaying the user-facing result.</text>
+</svg>
+

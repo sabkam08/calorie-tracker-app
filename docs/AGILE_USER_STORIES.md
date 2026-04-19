@@ -3,7 +3,7 @@
 ## 1. Purpose and Traceability
 This document converts stakeholder needs, functional requirements, and use cases into user stories. It provides the traceability layer between `SYSTEM_REQUIREMENTS.md`, `USE_CASES.md`, and the Agile delivery plan.
 
-The current project scope focuses on calorie tracking, meal logging, nutrition summaries, and deployment and maintenance support. Stakeholders such as advertisers and healthy food suppliers are retained in the analysis as future or indirect stakeholders, but they are not modelled as core initiating actors in the current scope.
+The current project scope focuses on calorie tracking, meal logging, nutrition summaries, and deployment or maintenance support. Stakeholders such as advertisers and healthy food suppliers are retained in the analysis as future or indirect stakeholders, but they are not modelled as core initiating actors in the current scope.
 
 ---
 

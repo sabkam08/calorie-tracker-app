@@ -2,9 +2,15 @@
 
 ## 1. Purpose and Scope
 
-This document models the principal workflows of the Calorie Tracker App using UML-style activity diagrams. The objective is to make the operational flow of the system explicit, show how actions are coordinated between the user, the application, and supporting services, and preserve traceability to the functional requirements and use cases.
+This document presents the principal workflows of the Calorie Tracker App using UML-style activity diagrams. The objective is to make the operational flow of the system explicit, show how actions are coordinated between the user, the application, and supporting services, and preserve traceability to the functional requirements and use cases.
 
-Each workflow below includes start and end points, decisions, swimlanes, and where appropriate, parallel actions. The workflows are written to reflect the current project scope and the documented stakeholder concerns.
+The report includes a visual overview of the workflows below for quick reference.
+
+![Activity Workflow Model Overview](activity-workflow-model.svg)
+
+*Figure 1: Overview of the principal workflows, their responsibilities, and their traceability to functional requirements.*
+
+Each workflow includes start and end points, decisions, swimlanes, and where appropriate, parallel actions. The workflows are written to reflect the current project scope and the documented stakeholder concerns.
 
 ## 2. Traceability Overview
 

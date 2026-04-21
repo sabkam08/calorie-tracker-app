@@ -4,7 +4,7 @@
 The Calorie Tracker App is a full-stack web application that helps users log meals, calculate daily calorie intake, and review nutrition patterns over time. This document defines the functional and non-functional requirements for the system and traces them to stakeholder needs.
 
 ## 2. Scope
-The system supports meal logging, calorie calculation, daily summaries, nutrition history, and basic account or profile management within the current project scope. Advanced features such as wearable-device integration, barcode scanning, or AI-based meal suggestions are outside the current scope unless added later.
+The system supports meal logging, calorie calculation, food catalogue search and maintenance, daily summaries, nutrition history, and basic account or profile management within the current project scope. Advanced features such as wearable-device integration, barcode scanning, or AI-based meal suggestions are outside the current scope unless added later.
 
 ## 3. Stakeholder-to-Requirement Traceability
 | Stakeholder | Main Requirement Areas |
@@ -32,6 +32,7 @@ The system supports meal logging, calorie calculation, daily summaries, nutritio
 | FR-05 | The system shall allow users to view meal history by day, week, and custom date range. | Fitness Enthusiast, Nutritionist, Fitness Researcher | The selected range returns the correct logs and totals for the chosen period. |
 | FR-06 | The system shall allow users to edit or delete an existing meal log. | Fitness Enthusiast, Software Developer | Edited or deleted entries are reflected immediately in history and summary totals. |
 | FR-07 | The system shall allow users to search for food items by name and filter results by matching terms. | Fitness Enthusiast, Healthy Food Supplier | Search results display relevant matches and exclude unrelated items for the entered keyword. |
+| FR-13 | The system shall allow users to add a new food item to the food database when no suitable match exists. | Fitness Enthusiast, Professional Athlete, Personal Chef, Nutritionist, Healthy Food Supplier, Data Provider | The new item is saved with the required nutritional fields, becomes available in search results, and can be selected in a meal log. |
 | FR-08 | The system shall allow users to save personal nutrition goals such as daily calorie target. | Fitness Enthusiast, Fitness Coach, Nutritionist | A saved goal is persisted and used in future summary calculations. |
 | FR-09 | The system shall generate a daily and weekly summary of calorie intake and meal activity. | Nutritionist, Fitness Coach, Fitness Researcher, Nutrition NGOs | Summary views show total calories, number of meals, and trend information for the selected period. |
 | FR-10 | The system shall store nutrition records in a PostgreSQL database. | Software Developer, Data Provider | Logged meals persist after a refresh or new session and are retrievable from the database. |

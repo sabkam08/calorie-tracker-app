@@ -259,8 +259,38 @@ If any required setting is missing or incorrect, the object enters **Misconfigur
 
 ---
 
-## 11. Summary
+## 11. Food Catalog Entry
 
-The object state model shows that the application is not only a collection of screens and queries; it is also a collection of structured lifecycles. These lifecycles support validation, persistence, update, retrieval, reporting, and deployment control in a manner that is consistent with the documented functional requirements.
+### State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Draft
+    Draft --> Validating: user submits food details
+    Validating --> Saved: required fields and values are valid
+    Validating --> Draft: validation fails
+    Saved --> Indexed: item becomes searchable
+    Indexed --> Updated: user edits food details
+    Updated --> Validating: revised details submitted
+    Indexed --> Archived: item is deprecated
+    Archived --> [*]
+```
+
+### Explanation
+
+A Food Catalog Entry begins in **Draft** while the user enters the food name and nutritional values. The entry moves to **Validating** once the user submits it. If the input is acceptable, the record is saved and then **Indexed** so that it becomes available in search results and meal logging.
+
+If the user later revises the entry, the object transitions to **Updated** and returns to validation before it is saved again. An item may be moved to **Archived** when it is no longer appropriate for active use.
+
+**Requirement alignment:**
+- **FR-13** is supported by creating and storing a new food item.
+- **FR-07** is supported by making the new item searchable.
+- **FR-12** is supported by validating the entry before persistence.
+
+---
+
+## 12. Summary
+
+The object state model shows that the application is not only a collection of screens and queries; it is also a collection of structured lifecycles. These lifecycles support validation, persistence, update, retrieval, reporting, catalogue maintenance, and deployment control in a manner that is consistent with the documented functional requirements.
 
 

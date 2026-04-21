@@ -3,7 +3,7 @@
 ## 1. Purpose and Traceability
 This document converts stakeholder needs, functional requirements, and use cases into user stories. It provides the traceability layer between `SYSTEM_REQUIREMENTS.md`, `USE_CASES.md`, and the Agile delivery plan.
 
-The current project scope focuses on calorie tracking, meal logging, nutrition summaries, and deployment or maintenance support. Stakeholders such as advertisers and healthy food suppliers are retained in the analysis as future or indirect stakeholders, but they are not modelled as core initiating actors in the current scope.
+The current project scope focuses on calorie tracking, meal logging, food catalogue maintenance, nutrition summaries, and deployment or maintenance support. Stakeholders such as advertisers and healthy food suppliers are retained in the analysis as future or indirect stakeholders, but they are not modelled as core initiating actors in the current scope.
 
 ---
 
@@ -14,6 +14,7 @@ The current project scope focuses on calorie tracking, meal logging, nutrition s
 | US-001 | FR-07 | UC-02 | Fast food search for meal entry |
 | US-002 | FR-01, FR-02 | UC-01 | Accurate meal logging and calorie calculation |
 | US-003 | FR-12 | UC-01 | Clear validation before save |
+| US-013 | FR-13 | UC-09 | Add a missing food item to the catalogue |
 | US-004 | FR-03, FR-04 | UC-03 | Daily calorie visibility and progress tracking |
 | US-005 | FR-08 | UC-06 | Persistent nutrition goals |
 | US-006 | FR-05 | UC-04 | Historical review over chosen ranges |
@@ -33,6 +34,7 @@ All user stories follow the format “As a [role], I want [action] so that [bene
 | US-001 | As a fitness enthusiast, I want to search for food items by name or filter so that I can find the correct item quickly. | Search results appear within 2 seconds; results show food name, serving details, and calories; selecting a result returns the item to the meal form. | High |
 | US-002 | As a fitness enthusiast, I want to create a meal log from a chosen food item and portion so that my calorie intake is recorded accurately. | Meal records save meal type, food item, portion, timestamp, and calories; the entry appears in history; daily totals update immediately. | High |
 | US-003 | As a fitness enthusiast, I want clear validation messages for incomplete or invalid meal data so that I can correct problems before saving. | Missing required fields block submission; invalid portion values show inline messages; previously entered data is retained after validation fails. | High |
+| US-013 | As a fitness enthusiast, I want to add a new food item to the database so that I can log foods that are not already listed. | Required food details are captured and saved; the new item appears in search results; duplicate entries are flagged or prevented. | High |
 | US-004 | As a fitness enthusiast, I want to view today’s calorie total and remaining calories so that I can stay within my target. | The dashboard shows consumed calories and remaining calories; values update after a meal is saved; when no goal exists, the app prompts me to set one. | High |
 | US-005 | As a fitness enthusiast, I want to save or update a daily nutrition goal so that the app can measure my progress against it. | A goal persists after refresh or sign-in; the new goal updates remaining-calorie calculations; invalid values are rejected with a message. | Medium |
 | US-006 | As a nutritionist or fitness coach, I want to view meal history by day, week, or custom range so that I can review patterns and trends. | The selected date range returns the correct logs; totals are grouped clearly; an empty state appears when no records are available. | Medium |

@@ -350,11 +350,55 @@ The export preparation and audit logging occur as parallel responsibilities beca
 
 ---
 
+## 9. Workflow 9: Add Food Item
+
+```mermaid
+flowchart TD
+    start((Start))
+    end((End))
+
+    subgraph User
+        U1[Open add-food form]
+        U2[Enter food details]
+        U3[Submit food item]
+    end
+
+    subgraph System
+        S1[Validate required fields]
+        D1{Valid?}
+        S2[Check for duplicate item]
+        D2{Duplicate found?}
+        S3[Save food item]
+        S4[Index item for search]
+        S5[Show confirmation]
+        S6[Show validation or duplicate message]
+    end
+
+    start --> U1 --> U2 --> U3 --> S1 --> D1
+    D1 -- No --> S6 --> end
+    D1 -- Yes --> S2 --> D2
+    D2 -- Yes --> S6 --> end
+    D2 -- No --> S3 --> S4 --> S5 --> end
+```
+
+### Explanation
+
+This workflow allows the user to add a food item when the database does not contain a suitable match. The system validates the entry before checking for duplicates so that only clean data is stored. Once saved, the item is indexed for future searches and meal logging.
+
+The workflow is intentionally direct because the primary objective is to extend the catalogue without introducing unnecessary steps that would slow down meal entry.
+
+**Stakeholder alignment:** This workflow addresses catalogue completeness for the Fitness Enthusiast, Professional Athlete, Personal Chef, Data Provider, and Healthy Food Supplier.
+
+**Requirement alignment:** FR-13, FR-07, and FR-12.
+
+---
+
 ## 11. Traceability Summary
 
 | Workflow | Stakeholder Value | Related Functional Requirements |
 |---|---|---|
 | Search Food Items | Rapid and accurate lookup | FR-07, FR-12 |
+| Add Food Item | Catalogue extension and missing-item recovery | FR-07, FR-12, FR-13 |
 | Create Meal Log | Fast, reliable meal capture | FR-01, FR-02, FR-12 |
 | View Daily Totals | Immediate progress visibility | FR-03, FR-04 |
 | View Meal History | Historical analysis and review | FR-05, FR-09 |
@@ -365,6 +409,6 @@ The export preparation and audit logging occur as parallel responsibilities beca
 
 ## 12. Summary
 
-The activity workflow model demonstrates how the application behaves as a coordinated sequence of actions rather than as isolated screens. The diagrams show where decisions occur, how the system responds to invalid input, and where parallel actions improve responsiveness. Together, the workflows reinforce the behavioural logic behind the documented requirements and use cases.
+The activity workflow model demonstrates how the application behaves as a coordinated sequence of actions rather than as isolated screens. The diagrams show where decisions occur, how the system responds to invalid input, how the catalogue can be extended, and where parallel actions improve responsiveness. Together, the workflows reinforce the behavioural logic behind the documented requirements and use cases.
 
 

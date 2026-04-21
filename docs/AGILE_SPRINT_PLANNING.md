@@ -4,11 +4,12 @@
 This document defines the first sprint plan for the Calorie Tracker App. It includes the sprint goal, selected user stories, task breakdown, collaboration workflow, and reflection on planning decisions.
 
 ## 2. Sprint Goal
-Deliver a working MVP in which a user can find a food item, submit a validated meal entry, and immediately view the impact on today’s calorie totals, with the system running in a documented, deployable, and secure configuration.
+Deliver a working MVP in which a user can find or add a food item, submit a validated meal entry, and immediately view the impact on today’s calorie totals, with the system running in a documented, deployable, and secure configuration.
 
 ## 3. Selected Sprint Stories
 - **US-001** Search for food items
 - **US-003** Validate meal data
+- **US-013** Add food item to the database
 - **US-002** Create meal log
 - **US-004** View daily totals and remaining calories
 - **US-009** Deploy with environment variables and PostgreSQL
@@ -30,16 +31,19 @@ Deliver a working MVP in which a user can find a food item, submit a validated m
 | T-010 | Add HTTPS-ready deployment notes and runtime checks | US-010 | DevOps | 4 | To Do |
 | T-011 | Write unit tests for search, validation, and calorie calculation | US-001, US-002, US-003 | QA | 6 | To Do |
 | T-012 | Run end-to-end smoke checks for meal entry and dashboard updates | US-002, US-004 | QA + Product Owner | 4 | To Do |
+| T-013 | Design the custom food entry form and required fields | US-013 | Product Owner + Frontend Dev | 3 | To Do |
+| T-014 | Build the food-item creation API and database persistence flow | US-013 | Backend Dev | 8 | To Do |
+| T-015 | Add validation and unit tests for duplicate or invalid food entries | US-013 | QA + Backend Dev | 5 | To Do |
 
 ## 5. How Sprint 1 Supports the MVP
-Sprint 1 targets the shortest path to measurable user value. The user can search for an item, correct invalid inputs, commit a meal entry, and immediately observe updated daily totals. The deployment and security work ensures the MVP is not only demonstrable, but also operationally credible: configuration is documented, persistence is reliable, and sensitive data is handled safely.
+Sprint 1 targets the shortest path to measurable user value. The user can search for an item, add a missing food entry when necessary, correct invalid inputs, commit a meal entry, and immediately observe updated daily totals. The deployment and security work ensures the MVP is not only demonstrable, but also operationally credible: configuration is documented, persistence is reliable, and sensitive data is handled safely.
 
 ## 6. GitHub Collaboration Workflow
 
 1. **Create issues** for each user story using the story ID as the issue title.
 2. **Link issues to requirements** by referencing `FR-xx` and `UC-xx` IDs in the issue body.
 3. **Move issues across the project board** as work progresses.
-4. **Attach the sprint milestone** to the six selected sprint stories.
+4. **Attach the sprint milestone** to the selected sprint stories.
 5. **Close issues with commit references** so the history stays traceable.
 
 This workflow keeps work visible, supports disciplined change control, and provides evidence of which requirements were implemented, reviewed, and verified.

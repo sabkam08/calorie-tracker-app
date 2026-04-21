@@ -55,6 +55,10 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 - **Extension (`<<extend>>`):**
   - `FR-03 View Daily Totals` extends to `FR-04 View Remaining Calories` because remaining calories are only shown when a goal exists.
+  - `FR-07 Search Food Items` extends to `FR-13 Add Food Item` when the catalogue does not contain a suitable match.
+
+- **Catalogue maintenance flow:**
+  - `FR-13 Add Food Item` supports `FR-01 Create Meal Log` by ensuring the user can add a missing item rather than stopping at a search failure.
 
 - **Direct Associations:**
   - End users drive meal logging, goal setting, history review, and summaries.
@@ -65,6 +69,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 - **Fast entry for the Fitness Enthusiast** is addressed by `FR-02` and `FR-01`.
 - **Precision for the Professional Athlete** is addressed by `FR-03`, `FR-04`, and `FR-07`.
+- **Catalogue completeness for all users** is addressed by `FR-13`.
 - **Professional review for the Nutritionist and Fitness Coach** is addressed by `FR-05` and `FR-09`.
 - **Maintainability and deployment reliability for the Software Developer** are addressed by `FR-10` and `FR-11`.
 - **Data quality for the Data Provider** is represented through direct support of the food-search workflow.
@@ -80,7 +85,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 **Requirement(s):** FR-01, FR-02, FR-11  
 **Priority:** Critical
 
-**Description:** The user records a meal by choosing a meal type, searching or entering a food item, specifying a portion, and saving the entry. The system calculates calories, validates the data, and stores the record.
+**Description:** The user records a meal by choosing a meal type, searching for a food item or adding a missing one, specifying a portion, and saving the entry. The system calculates calories, validates the data, and stores the record.
 
 **Preconditions:**
 - User is authenticated.
@@ -104,7 +109,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 9. System stores the meal and updates totals.
 
 **Alternative Flows:**
-- **A1: No matching food item** — User enters a custom food item manually.
+- **A1: No matching food item** — User follows the add-food flow and saves the missing item to the database.
 - **A2: Invalid portion** — System shows a validation message and blocks submission.
 - **A3: Network/data lookup failure** — System shows a retry message and preserves entered data.
 
@@ -136,7 +141,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 6. System passes the selected item to the meal form.
 
 **Alternative Flows:**
-- **A1: No results** — System offers a custom-entry option.
+- **A1: No results** — System offers the add-food option.
 - **A2: Poor match quality** — System suggests broader terms or filters.
 
 ---
@@ -329,6 +334,39 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 ---
 
+### UC-09: Add Food Item to Database
+
+**Primary Actor(s):** Fitness Enthusiast, Professional Athlete, Personal Chef  
+**Supporting Actor(s):** Data Provider, Healthy Food Supplier  
+**Requirement(s):** FR-13, FR-07, FR-12  
+**Priority:** Important
+
+**Description:** The user adds a new food item to the database when the catalogue does not contain a suitable match. The system validates the entry, stores it, and makes it available for future search and meal logging.
+
+**Preconditions:**
+- User is authenticated.
+- The food catalogue form is available.
+
+**Postconditions:**
+- The new food item is saved to the database.
+- The item becomes searchable and selectable in meal logging.
+
+**Basic Flow:**
+1. User opens the add-food form.
+2. User enters the food name and required nutritional details.
+3. System validates the input.
+4. User submits the entry.
+5. System saves the item to the database.
+6. System indexes the item for future search results.
+7. System confirms that the item was added successfully.
+
+**Alternative Flows:**
+- **A1: Duplicate item detected** — System warns the user and prevents a duplicate save.
+- **A2: Invalid nutritional values** — System highlights the offending fields and blocks submission.
+- **A3: Storage failure** — System preserves the entered values and reports that the item could not be saved.
+
+---
+
 ## 5. Test Cases
 
 ### 5.1 Functional Test Cases
@@ -347,6 +385,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 | TC-010 | FR-09 | UC-07 | Generate a weekly summary and export it | 1. Open reports 2. Select weekly range 3. Export CSV/PDF | Summary is generated and the export file downloads successfully | Not run | Pending |
 | TC-011 | FR-10, FR-11 | UC-08 | Deploy using environment variables and verify persistence | 1. Create env file 2. Start app 3. Check logs 4. Restart and confirm records remain | App starts successfully, connects to DB, and records persist | Not run | Pending |
 | TC-012 | FR-12 | UC-01 | Reject invalid meal input | 1. Leave a required field blank or enter invalid portion 2. Save | Validation message appears and the form does not submit | Not run | Pending |
+| TC-013 | FR-13 | UC-09 | Add a new food item to the database | 1. Open add-food form 2. Enter required food details 3. Save | Food item is stored, becomes searchable, and is available for meal logging | Not run | Pending |
 
 ### 5.2 Non-Functional Test Scenarios
 
@@ -373,6 +412,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 | FR-10 | UC-08 | TC-011 |
 | FR-11 | UC-08 | TC-011 |
 | FR-12 | UC-01 | TC-012 |
+| FR-13 | UC-09 | TC-013 |
 
 ---
 

@@ -24,7 +24,7 @@ The system will be developed by a single developer using a modern web stack cons
 
 ## 1. User Journey Diagram
 
-This diagram shows a person's experience during one session of using progressive web app to track their calories.
+This diagram shows a person's experience during one session of using the progressive web app to track calories and extend the food catalogue when necessary.
 
 ```mermaid
 graph LR
@@ -33,7 +33,7 @@ graph LR
     B -- Yes --> D[Dashboard]
     C --> D
     D --> E[Log Food/Meal]
-    E --> F{Search Database or<br/>Scan Barcode}
+    E --> F{Search Database or<br/>Create Food Item}
     F --> G[Input Portion Size]
     G --> H[Update Daily Totals]
     H --> I[Show Remaining Calories/Macros]
@@ -78,10 +78,13 @@ This diagram shows how users interact with the calorie tracking system and how t
     participant UI as Web App UI
     participant DB as Database/API
 
-    User->>UI: Selects "Add Food"
     User->>UI: Searches for "Apple"
     UI->>DB: Query Food Database
     DB-->>UI: Return Food List
+    User->>UI: Selects "Add Food" when no match exists
+    User->>UI: Enters food details
+    UI->>DB: Validate and save food item
+    DB-->>UI: Confirm food item added
     User->>UI: Selects Item + Quantity
     UI->>DB: Calculate & Save Daily Logs
     DB-->>UI: Update Totals

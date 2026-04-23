@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/**/*.test.ts",
+    "test:watch": "node --watch --import tsx --test tests/**/*.test.ts",
+    "coverage": "node --import tsx --test --experimental-test-coverage tests/**/*.test.ts",
+    "demo": "tsx src/demo.ts"
   },
   "dependencies": {
     "next": "16.2.4",
@@ -21,6 +26,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }

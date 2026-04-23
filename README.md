@@ -21,6 +21,48 @@ The project demonstrates full-stack system design through specification, archite
 - **Backend API:** Next.js API Routes
 - **Database:** PostgreSQL
 
+## Implementation Overview
+
+The source code follows the documented domain and class model:
+
+- `src/domain/` contains the class implementations (`UserProfile`, `FoodCatalogue`, `FoodItem`, `MealLog`, `MealEntry`, `NutritionGoal`, `NutritionSummary`).
+- `src/creational_patterns/` contains all six creational pattern implementations.
+- `tests/` contains unit tests for domain rules and each creational pattern.
+
+### Language and Design Choices
+
+- **TypeScript** is used to preserve strong type safety and match the existing Next.js project stack.
+- Domain classes use private fields with focused methods aligned to the class diagram and requirements traceability.
+- Business rules from the domain model are enforced in constructors and guard methods (duplicate detection, positive portions, required entries, and valid goals).
+- The implementation separates domain logic from pattern examples to keep responsibilities clear.
+
+### Creational Pattern Rationale
+
+- **Simple Factory:** `FoodItemSimpleFactory` centralizes creation of standard and custom food items.
+- **Factory Method:** `SummaryExporterCreator` delegates exporter construction to concrete creators for CSV or JSON output.
+- **Abstract Factory:** Dashboard widget families (`MobileDashboardWidgetFactory`, `WebDashboardWidgetFactory`) create related UI components consistently.
+- **Builder:** `MealLogBuilder` constructs meal logs step by step and validates required elements.
+- **Prototype:** `FoodItemPrototypeRegistry` clones preconfigured food templates for fast reuse.
+- **Singleton:** `DatabaseConnection` ensures one shared connection instance, including async-safe initialization.
+
+## Running Tests and Coverage
+
+```bash
+npm test
+npm run coverage
+```
+
+The coverage command generates terminal output and an HTML report under `coverage/`.
+Reference notes for coverage execution are available in `tests/COVERAGE_REPORT.md`.
+
+## Demo Runner
+
+```bash
+npm run demo
+```
+
+This command executes a small end-to-end demonstration of object creation and summary calculation.
+
 ## Documentation
 
 Project documentation can be found in the following files:

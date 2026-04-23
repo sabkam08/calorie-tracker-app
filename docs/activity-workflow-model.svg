@@ -95,4 +95,3 @@
   <text class="small" x="105" y="722">The workflows support daily tracking, correction, historical review, reporting, and deployment readiness.</text>
   <text class="small" x="105" y="749">Parallel outputs are used where confirmation, refresh, or audit logic can continue without delaying the user-facing result.</text>
 </svg>
-

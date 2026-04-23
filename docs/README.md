@@ -31,6 +31,10 @@ Project documentation can be found in the following files:
 - 📘 [System Requirements Document](SYSTEM_REQUIREMENTS.md)
 - 📚 [Use Case Overview & Diagram](USE_CASES.md)
 - ✍️ [Use Case Specifications & Test Plan](TEST_AND_USE_CASES.md)
+- 🧱 [Domain Model](DOMAIN_MODEL.md)
+- 🖼️ [Domain Model Figure](domain-model.svg)
+- 🧩 [Class Diagram](CLASS_DIAGRAM.md)
+- 🖼️ [Class Diagram Figure](class-diagram.svg)
 - 🧭 [Object State Model](OBJECT_STATE_MODEL.md)
 - 🖼️ [Object State Model Figure](object-state-model.svg)
 - 🔄 [Activity Workflow Model](ACTIVITY_WORKFLOW_MODEL.md)
@@ -50,6 +54,8 @@ The repository also includes documentation for the GitHub Projects workflow used
 - The **template comparison figure** provides a visual summary of the template options discussed in the report.
 - The **Kanban explanation** describes the custom board structure, work-in-progress limits, and workflow logic.
 - The **Kanban board illustration** is provided as an SVG asset and can be embedded in the project documentation or repository README.
+- The **domain model** defines the principal entities, business rules, and requirement traceability for the application.
+- The **class diagram** presents the object-oriented structure in Mermaid.js and is paired with an SVG export for consistent rendering.
 - The **object state model** documents key lifecycle transitions for core application artefacts.
 - The **activity workflow model** describes the principal operational flows using UML-style diagrams.
 - The **SVG figures** provide visual exports of the two behavioural models for direct embedding and easy review.

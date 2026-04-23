@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="820" viewBox="0 0 1300 820" role="img" aria-labelledby="title desc">
+  <title id="title">Calorie Tracker App Domain Model</title>
+  <desc id="desc">A conceptual domain model showing the principal entities and relationships in the calorie tracking system.</desc>
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 12; ry: 12; }
+      .head { fill: #dbeafe; stroke: #334155; stroke-width: 2; rx: 12; ry: 12; }
+      .title { font: 700 18px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 14px Arial, sans-serif; fill: #0f172a; }
+      .small { font: 12px Arial, sans-serif; fill: #475569; }
+      .line { stroke: #334155; stroke-width: 2.2; fill: none; }
+      .label { font: 12px Arial, sans-serif; fill: #475569; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1300" height="820" fill="#f8fafc"/>
+  <text x="650" y="36" text-anchor="middle" class="title">Calorie Tracker App – Domain Model</text>
+  <text x="650" y="58" text-anchor="middle" class="small">Conceptual overview of core entities and their relationships</text>
+
+  <rect x="70" y="100" width="240" height="150" class="box"/>
+  <rect x="70" y="100" width="240" height="34" class="head"/>
+  <text x="190" y="123" text-anchor="middle" class="title">UserProfile</text>
+  <text x="92" y="160" class="body">dailyCalorieGoal</text>
+  <text x="92" y="182" class="body">activityLevel</text>
+  <text x="92" y="204" class="body">email</text>
+
+  <rect x="520" y="80" width="260" height="170" class="box"/>
+  <rect x="520" y="80" width="260" height="34" class="head"/>
+  <text x="650" y="103" text-anchor="middle" class="title">FoodCatalogue</text>
+  <text x="542" y="142" class="body">search and duplicate control</text>
+  <text x="542" y="164" class="body">stores many FoodItem records</text>
+  <text x="542" y="186" class="body">supports custom item creation</text>
+
+  <rect x="980" y="80" width="250" height="190" class="box"/>
+  <rect x="980" y="80" width="250" height="34" class="head"/>
+  <text x="1105" y="103" text-anchor="middle" class="title">FoodItem</text>
+  <text x="1002" y="140" class="body">name</text>
+  <text x="1002" y="162" class="body">servingSize</text>
+  <text x="1002" y="184" class="body">caloriesPerServing</text>
+  <text x="1002" y="206" class="body">sourceType</text>
+
+  <rect x="120" y="390" width="250" height="190" class="box"/>
+  <rect x="120" y="390" width="250" height="34" class="head"/>
+  <text x="245" y="413" text-anchor="middle" class="title">MealLog</text>
+  <text x="142" y="450" class="body">entryDate</text>
+  <text x="142" y="472" class="body">mealType</text>
+  <text x="142" y="494" class="body">totalCalories</text>
+  <text x="142" y="516" class="body">notes</text>
+
+  <rect x="470" y="390" width="230" height="170" class="box"/>
+  <rect x="470" y="390" width="230" height="34" class="head"/>
+  <text x="585" y="413" text-anchor="middle" class="title">MealEntry</text>
+  <text x="492" y="450" class="body">portionSize</text>
+  <text x="492" y="472" class="body">calories</text>
+  <text x="492" y="494" class="body">createdAt</text>
+
+  <rect x="830" y="390" width="260" height="180" class="box"/>
+  <rect x="830" y="390" width="260" height="34" class="head"/>
+  <text x="960" y="413" text-anchor="middle" class="title">NutritionGoal</text>
+  <text x="852" y="450" class="body">dailyCalorieTarget</text>
+  <text x="852" y="472" class="body">proteinTarget</text>
+  <text x="852" y="494" class="body">effectiveDate</text>
+
+  <rect x="880" y="640" width="270" height="150" class="box"/>
+  <rect x="880" y="640" width="270" height="34" class="head"/>
+  <text x="1015" y="663" text-anchor="middle" class="title">NutritionSummary</text>
+  <text x="902" y="700" class="body">periodStart / periodEnd</text>
+  <text x="902" y="722" class="body">totalCalories</text>
+  <text x="902" y="744" class="body">remainingCalories</text>
+
+  <path d="M 310 175 L 520 175" class="line" marker-end="url(#arrow)"/>
+  <text x="400" y="162" class="label">owns</text>
+
+  <path d="M 780 175 L 980 175" class="line" marker-end="url(#arrow)"/>
+  <text x="860" y="162" class="label">stores</text>
+
+  <path d="M 1110 270 L 640 390" class="line" marker-end="url(#arrow)"/>
+  <text x="900" y="310" class="label">used by</text>
+
+  <path d="M 245 290 L 245 390" class="line" marker-end="url(#arrow)"/>
+  <text x="257" y="338" class="label">contains</text>
+
+  <path d="M 370 480 L 470 480" class="line" marker-end="url(#arrow)"/>
+  <text x="405" y="468" class="label">references</text>
+
+  <path d="M 945 570 L 1000 640" class="line" marker-end="url(#arrow)"/>
+  <text x="955" y="610" class="label">summarised in</text>
+
+  <path d="M 720 480 L 830 480" class="line" marker-end="url(#arrow)"/>
+  <text x="753" y="468" class="label">compares against</text>
+
+  <path d="M 650 250 L 650 390" class="line" marker-end="url(#arrow)"/>
+  <text x="660" y="326" class="label">adds items to</text>
+</svg>
+

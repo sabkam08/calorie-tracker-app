@@ -128,6 +128,7 @@
 
   <ellipse id="uc9" class="usecase" cx="640" cy="590" rx="120" ry="30"/>
   <ellipse id="uc10" class="usecase" cx="980" cy="590" rx="130" ry="30"/>
+  <ellipse id="uc12" class="usecase" cx="640" cy="655" rx="125" ry="30"/>
 
   <text x="555" y="220" text-anchor="middle" class="small">FR-01 Create Meal Log</text>
   <text x="800" y="220" text-anchor="middle" class="small">FR-02 Search Food Items</text>
@@ -143,6 +144,7 @@
 
   <text x="640" y="595" text-anchor="middle" class="small">FR-10 Store Records</text>
   <text x="980" y="595" text-anchor="middle" class="small">FR-11 Configure Deployment</text>
+  <text x="640" y="660" text-anchor="middle" class="small">FR-13 Add Food Item</text>
 
   <!-- Actor to use case associations -->
   <line class="link" x1="136" y1="165" x2="460" y2="215"/>
@@ -158,6 +160,7 @@
   <line class="link" x1="1264" y1="410" x2="1140" y2="465"/>
   <line class="link" x1="1264" y1="540" x2="845" y2="215"/>
   <line class="link" x1="1264" y1="670" x2="1140" y2="465"/>
+  <line class="link" x1="136" y1="182" x2="520" y2="655"/>
 
   <!-- Include / extend relationships -->
   <line class="link dashed" x1="555" y1="245" x2="800" y2="245"/>

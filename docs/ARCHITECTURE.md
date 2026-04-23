@@ -40,9 +40,9 @@ graph LR
     I --> D
 ```
 
-## 2. Entity Relationship Diagram
+## 2. Conceptual Domain Snapshot
 
-This diagram shows the structure and relationship between entities. Please not this diagram is subject to change as system development progresses.
+This diagram shows the high-level structure and relationship between the core domain entities. The more detailed domain model and class diagram are documented in `DOMAIN_MODEL.md` and `CLASS_DIAGRAM.md`.
 
 
 ```mermaid

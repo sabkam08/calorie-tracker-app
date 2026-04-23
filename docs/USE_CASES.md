@@ -97,6 +97,11 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 - The detail appears only when a user has set a goal.
 - Ties FR-03 and FR-04 together in a natural workflow.
 
+**Search Food Items → Add Food Item**
+- When the catalogue does not contain a suitable match, the user can create a new food entry.
+- This keeps meal logging moving without forcing the user to stop at a search failure.
+- Supports FR-07 and FR-13 together.
+
 ### Generalization Relationships (→ initiates)
 **Busy Professional generalizes Primary User**
 - Both follow the same core meal logging flow.
@@ -109,8 +114,8 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 | Stakeholder | Key Concern | Addressed By Use Cases |
 |---|---|---|
-| Fitness Enthusiast | Quick meal logging, accurate totals | Create Meal Log, View Daily Totals, Display Remaining Calories |
-| Professional Athlete | Precision, fast entry, reliable totals | Search Food Items, Create Meal Log, View Daily Totals |
+| Fitness Enthusiast | Quick meal logging, accurate totals | Create Meal Log, View Daily Totals, Display Remaining Calories, Add Food Item |
+| Professional Athlete | Precision, fast entry, reliable totals | Search Food Items, Create Meal Log, Add Food Item, View Daily Totals |
 | Nutritionist | Reliable summaries and trend analysis | View Meal History, Generate Summaries & Export |
 | Fitness Coach | Progress monitoring and actionable summaries | View Meal History, View Daily Totals, Generate Summaries & Export |
 | Personal Chef | Portion planning and dietary alignment | View Meal History, Generate Summaries & Export |
@@ -118,7 +123,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 | Software Developer | Clean architecture and maintainability | Configure Environment, Maintain Documentation |
 | Data Provider | Stable data access and correct usage | Search Food Items, Create Meal Log |
 | Nutrition NGOs | Anonymised insight for public-health use | Generate Summaries & Export |
-| Healthy Food Supplier | Nutrition-aware product visibility | Generate Summaries & Export |
+| Healthy Food Supplier | Nutrition-aware product visibility | Generate Summaries & Export, Add Food Item |
 | Advertiser | Future engagement and visibility | Future-oriented analytics only; not core to current scope |
 
 ---
@@ -140,6 +145,7 @@ Each use case is mapped to one or more functional requirements (FR) from `SYSTEM
 | Generate Summaries & Export | FR-09 | Create reports with totals and trends |
 | Configure Environment | FR-10, FR-11 | Set up database and application settings |
 | Maintain Documentation | FR-11 | Keep docs current for future maintainers |
+| Add Food Item | FR-13 | Create a new catalogue entry when no suitable match exists |
 
 ---
 
@@ -150,8 +156,8 @@ Each use case is mapped to one or more functional requirements (FR) from `SYSTEM
 - **Supporting stakeholders:** Software Developer and Data Provider ensure the system can be deployed, maintained, and populated with reliable data.
 - **Extended stakeholders:** Nutrition NGOs, Healthy Food Supplier, and Advertiser are retained for completeness and future expansion.
 
-### Why 11 Use Cases?
-- **Core workflows (8):** Meal logging, search, validation, viewing, editing, goals, summaries
+### Why 12 Use Cases?
+- **Core workflows (9):** Meal logging, search, validation, catalogue maintenance, viewing, editing, goals, summaries
 - **Support workflows (3):** Environment setup, documentation, configuration
 - Each use case maps to one or more functional requirements, ensuring complete coverage
 

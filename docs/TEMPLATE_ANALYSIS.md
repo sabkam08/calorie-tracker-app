@@ -1,7 +1,7 @@
 # Calorie Tracker App – GitHub Project Template Analysis
 
 ## 1. Introduction
-This document evaluates the GitHub Projects templates available for Agile work management and identifies the template most appropriate for the Calorie Tracker App. The analysis is aligned with the sprint-based delivery approach defined in the project’s planning materials.
+This document evaluates the GitHub Projects templates available for Agile work management and identifies the template most appropriate for the Calorie Tracker App. The analysis is aligned with the sprint-based delivery approach defined in the project’s Agile planning document.
 
 ## 2. Template Comparison Figure
 
@@ -15,8 +15,8 @@ This document evaluates the GitHub Projects templates available for Agile work m
 |---|---|---|---|---|
 | **Basic Kanban** | A simple flow such as **To Do → In Progress → Done**. Items are moved manually. | Limited or no built-in automation. | Suitable for small teams that need a straightforward visual board. | Adequate for basic tracking, but too minimal for a project that requires sprint traceability, testing, and issue-based delivery. |
 | **Automated Kanban** | A structured flow such as **Backlog → Ready → In Progress → Review → Done**. | Can automate issue movement, status updates, and workflow transitions when issues or pull requests change state. | Strong fit for continuous delivery and incremental work. | Highly suitable because the project is issue-driven, sprint-oriented, and benefits from reduced manual board maintenance. |
-| **Bug Triage** | Usually organised around **New → Needs Triage → Confirmed → In Progress → Done**. | Strong for triage automation, labelling, and prioritisation of defects. | Best suited to maintenance-heavy or support-heavy environments. | Less suitable because the project is focused on planned feature delivery rather than large-scale defect management. |
-| **Team Planning** | Commonly uses **Backlog → Ready for Sprint → In Progress → Blocked → Done**, often combined with iteration views. | Supports planning, prioritisation, milestones, and team coordination. | Strong for sprint planning and multi-member delivery. | Useful from a planning perspective, but more process-heavy than necessary for a compact project. |
+| **Bug Triage** | Usually organized around **New → Needs Triage → Confirmed → In Progress → Done**. | Strong for triage automation, labeling, and prioritization of defects. | Best suited to maintenance-heavy or support-heavy environments. | Less suitable because the project is focused on planned feature delivery rather than large-scale defect management. |
+| **Team Planning** | Commonly uses **Backlog → Ready for Sprint → In Progress → Blocked → Done**, often combined with iteration views. | Supports planning, prioritization, milestones, and team coordination. | Strong for sprint planning and multi-member delivery. | Useful from a planning perspective, but more process-heavy than necessary for a compact academic project. |
 
 ## 4. Selected Template and Justification
 

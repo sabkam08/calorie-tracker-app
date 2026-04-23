@@ -42,7 +42,7 @@ graph LR
 
 ## 2. Conceptual Domain Snapshot
 
-This diagram shows the high-level structure and relationship between the core domain entities. The more detailed domain model and class diagram are documented in `DOMAIN_MODEL.md` and `CLASS_DIAGRAM.md`.
+This diagram shows the high-level structure and relationships among the core domain entities. The detailed domain model and class diagram are documented in `DOMAIN_MODEL.md` and `CLASS_DIAGRAM.md`.
 
 
 ```mermaid

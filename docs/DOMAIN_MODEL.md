@@ -1,7 +1,7 @@
 # Calorie Tracker App – Domain Model
 
 ## 1. Purpose
-This document defines the core domain entities for the Calorie Tracker App, the responsibilities of each entity, the relationships between them, and the business rules that govern their interaction. It provides the conceptual bridge between the requirements, the use cases, and the structural design.
+This document defines the core domain entities of the Calorie Tracker App, their responsibilities, their relationships, and the business rules that govern their interaction. It provides the conceptual bridge between the requirements, the use cases, and the structural design.
 
 ## 2. Core Domain Entities
 
@@ -16,20 +16,20 @@ This document defines the core domain entities for the Calorie Tracker App, the 
 | `NutritionSummary` | `summaryId`, `periodStart`, `periodEnd`, `totalCalories`, `remainingCalories`, `mealCount` | Consolidates meal activity into daily or weekly progress information. | Derived from `MealLog` records; compared against `NutritionGoal`. | FR-03, FR-04, FR-05, FR-09 |
 
 ## 3. Relationship Overview
-- A `UserProfile` may own multiple `MealLog` records, but each `MealLog` belongs to one user only.
+- A `UserProfile` may own multiple `MealLog` records, but each `MealLog` belongs to one user.
 - A `MealLog` contains one or more `MealEntry` records.
-- Each `MealEntry` refers to exactly one `FoodItem`.
-- A `FoodCatalogue` stores all reusable food references, including manually added items.
-- A `NutritionGoal` is optional, but when present it is used to compute remaining calories.
-- A `NutritionSummary` is derived data and should not be edited directly.
+- Each `MealEntry` references one `FoodItem`.
+- A `FoodCatalogue` stores reusable food references, including manually added items.
+- A `NutritionGoal` is optional, but when present it supports remaining-calorie calculations.
+- A `NutritionSummary` is derived data and is not edited directly.
 
 ## 4. Business Rules
 1. A meal log shall not be saved unless it contains at least one valid meal entry.
 2. Each meal entry shall reference a valid food item and a positive portion size.
-3. Food items added manually shall include a name and the required nutrition fields before they can be saved.
+3. Manually added food items shall include a name and the required nutrition fields before save.
 4. Duplicate food items shall be flagged before insertion into the catalogue.
-5. A user shall maintain at most one active nutrition goal at a time.
-6. Nutrition summaries shall be derived from meal logs and shall remain read-only.
+5. A user shall maintain at most one active nutrition goal.
+6. Nutrition summaries shall be derived from meal logs and remain read-only.
 7. Remaining calories shall equal the daily goal minus consumed calories when a goal exists.
 8. Custom food items shall become searchable immediately after successful persistence.
 
@@ -42,5 +42,5 @@ This document defines the core domain entities for the Calorie Tracker App, the 
 | `NutritionSummary` | Generate Summaries & Export | FR-05, FR-09 |
 
 ## 6. Domain Interpretation
-The domain model centres on a small number of stable objects so that the system remains understandable and maintainable. The catalogue handles food reference data, meal logs capture daily behaviour, and summaries provide derived insight. This structure supports the current scope while allowing controlled growth if additional nutritional features are introduced later.
+The domain model centres on a small set of stable objects so that the system remains understandable and maintainable. The catalogue manages food reference data, meal logs capture daily behaviour, and summaries provide derived insight. This structure supports the current scope while leaving room for controlled expansion.
 

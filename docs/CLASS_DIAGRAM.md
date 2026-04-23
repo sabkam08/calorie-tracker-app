@@ -1,7 +1,7 @@
 # Calorie Tracker App – Class Diagram
 
 ## 1. Purpose
-This document presents the structural class model for the Calorie Tracker App. It translates the domain view into an object-oriented representation with classes, attributes, methods, relationships, and multiplicities.
+This document presents the structural class model for the Calorie Tracker App. It translates the domain view into an object-oriented representation of classes, attributes, methods, relationships, and multiplicities.
 
 ## 2. Mermaid.js Class Diagram
 
@@ -96,10 +96,10 @@ NutritionSummary ..> NutritionGoal : compares against goal
 ```
 
 ## 3. Key Design Decisions
-- The model centres on `MealLog` as the main aggregate because meal entry creation, editing, and deletion all depend on a coherent log.
-- `FoodCatalogue` is separated from `MealLog` so that search and catalogue maintenance remain distinct from day-to-day meal capture.
-- `NutritionSummary` is treated as derived data rather than persistent user input, which keeps reporting consistent with the recorded meal history.
-- `NutritionGoal` remains optional so that the application can still support basic tracking even when a user has not configured a target.
+- The model centres on `MealLog` as the main aggregate because meal creation, editing, and deletion all depend on a coherent log.
+- `FoodCatalogue` is separated from `MealLog` so that search and catalogue maintenance remain distinct from meal capture.
+- `NutritionSummary` is treated as derived data rather than persistent user input, which keeps reporting consistent with recorded meal history.
+- `NutritionGoal` remains optional so that basic tracking is still possible when a user has not configured a target.
 - The `sourceType` attribute on `FoodItem` allows the catalogue to represent standard food references and user-added items in a single structure.
 
 ## 4. Design Notes and Traceability
@@ -114,4 +114,4 @@ NutritionSummary ..> NutritionGoal : compares against goal
 | `NutritionSummary` | Produces progress and trend views | FR-05, FR-09 | View Meal History, Generate Summaries & Export |
 
 ## 5. Implementation Interpretation
-The class diagram preserves the same boundaries as the domain model while making object responsibilities explicit. Composition is used where one object cannot exist meaningfully without another, while aggregation is used where ownership exists but lifecycle dependence is weaker. This creates a design that is suitable for implementation while remaining faithful to the documented requirements.
+The class diagram preserves the same boundaries as the domain model while making object responsibilities explicit. Composition is used where one object cannot exist meaningfully without another, while aggregation is used where ownership exists but lifecycle dependence is weaker. The result is suitable for implementation and remains faithful to the documented requirements.

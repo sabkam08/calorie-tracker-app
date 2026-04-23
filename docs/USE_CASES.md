@@ -2,7 +2,7 @@
 
 ## 1. Use Case Diagram
 
-The use case diagram is embedded below as an SVG image so it renders consistently without relying on Mermaid support.
+The use case diagram is embedded below as an SVG image to ensure consistent rendering without reliance on Mermaid support.
 
 ![Calorie Tracker App UML Use Case Diagram](use-case-diagram.svg)
 
@@ -11,57 +11,57 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 ## 2. Detailed Actor Descriptions
 
 ### Fitness Enthusiast
-- **Role:** Primary end user who logs meals and tracks daily nutrition progress.
-- **Concerns:** Ease of use, fast entry, habit tracking, and clear progress feedback.
-- **Interactions:** Meal logging, viewing summaries, editing entries, setting goals.
+- **Role:** Primary end user responsible for meal logging and daily progress tracking.
+- **Concerns:** Ease of use, rapid entry, habit tracking, and clear progress feedback.
+- **Interactions:** Logs meals, reviews summaries, edits entries, and sets goals.
 - **Success Metrics:** Meal entry completed in under one minute; totals update immediately.
 
 ### Professional Athlete
-- **Role:** Performance-focused user who requires precise nutrition tracking.
-- **Concerns:** High accuracy, meal timing, reliable summaries, and consistent records.
-- **Interactions:** Meal logging, progress review, goal monitoring, and trend analysis.
-- **Success Metrics:** Accurate calorie records and dependable performance-oriented summaries.
+- **Role:** Performance-focused user requiring precise nutrition tracking.
+- **Concerns:** Accuracy, meal timing, reliable summaries, and consistent records.
+- **Interactions:** Logs meals, reviews progress, monitors goals, and analyses trends.
+- **Success Metrics:** Accurate calorie records and dependable performance summaries.
 
 ### Nutritionist
 - **Role:** Professional reviewer who analyses logs and supports dietary guidance.
 - **Concerns:** Accurate summaries, trend visibility, and exportable records.
-- **Interactions:** View history, generate reports, and analyse nutrition patterns.
-- **Success Metrics:** Review a week of logs efficiently and export results without data loss.
+- **Interactions:** Reviews history, generates reports, and analyses nutrition patterns.
+- **Success Metrics:** Weekly review completed efficiently with no data loss during export.
 
 ### Fitness Coach
 - **Role:** Professional who monitors client progress and supports goal adherence.
 - **Concerns:** Consistent progress tracking, summary views, and actionable feedback.
-- **Interactions:** View history, review summaries, and support goal setting.
-- **Success Metrics:** Clear progress visibility for coaching conversations.
+- **Interactions:** Reviews history, checks summaries, and supports goal setting.
+- **Success Metrics:** Clear progress visibility for coaching discussions.
 
 ### Personal Chef
 - **Role:** Service provider who uses nutrition information to plan meals.
-- **Concerns:** Portion accuracy, dietary restriction awareness, and meal planning support.
-- **Interactions:** Review summaries and align meal portions with nutrition targets.
+- **Concerns:** Portion accuracy, dietary restrictions, and meal planning support.
+- **Interactions:** Reviews summaries and aligns meal portions with nutrition targets.
 - **Success Metrics:** Meal plans match dietary requirements and portion targets.
 
 ### Fitness Researcher
 - **Role:** Analyst who studies historical nutrition and activity patterns.
 - **Concerns:** Data integrity, anonymised access, and structured historical outputs.
-- **Interactions:** Review history and evaluate reports for trend analysis.
+- **Interactions:** Reviews history and evaluates reports for trend analysis.
 - **Success Metrics:** Reliable use of exported or summarised data for research purposes.
 
 ### Software Developer
-- **Role:** Internal contributor who builds, maintains, and deploys the application.
+- **Role:** Internal contributor responsible for building, maintaining, and deploying the application.
 - **Concerns:** Modularity, maintainability, testability, and clear documentation.
-- **Interactions:** Code organisation, API maintenance, deployment configuration, documentation updates.
-- **Success Metrics:** Stable deployments, limited defects, and maintainable code structure.
+- **Interactions:** Manages code structure, API maintenance, deployment configuration, and documentation.
+- **Success Metrics:** Stable deployments, limited defects, and maintainable code.
 
 ### Data Provider
 - **Role:** External source that supplies food and nutrition reference data.
 - **Concerns:** API stability, correct attribution, and compliant data usage.
 - **Interactions:** Supports search and calorie lookup workflows.
-- **Success Metrics:** Consistent data quality and dependable service availability.
+- **Success Metrics:** Consistent data quality and dependable availability.
 
 ### Nutrition NGOs
-- **Role:** Public-health stakeholder interested in aggregated nutrition insights.
+- **Role:** Public-health stakeholder interested in aggregated nutrition insight.
 - **Concerns:** Accessibility, anonymised reporting, and educational usefulness.
-- **Interactions:** Review summary outputs and aggregate trends.
+- **Interactions:** Reviews summary outputs and aggregate trends.
 - **Success Metrics:** Useful public-health insight without exposure of personal data.
 
 ### Healthy Food Supplier
@@ -82,31 +82,31 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 ### Inclusion Relationships (→ includes)
 **Create Meal Log → Search Food Items**
-- Every meal entry depends on locating the correct food item in the database.
-- This ensures that search occurs before calorie calculation.
-- Supports FR-01 and FR-07 together.
+- Each meal entry depends on locating the correct food item.
+- Search therefore occurs before calorie calculation.
+- Supports FR-01 and FR-07.
 
 **Create Meal Log → Validate Input**
-- Validation occurs as part of meal submission rather than as a separate process.
-- This prevents invalid entries before they reach the database.
-- Addresses FR-12 (validation messages).
+- Validation is performed during meal submission.
+- This prevents invalid entries from reaching the database.
+- Addresses FR-12.
 
 ### Extension Relationships (→ extends to)
 **View Daily Totals ⟶ Display Remaining Calories**
-- Remaining calories appear as an extension of the totals view.
-- The detail appears only when a user has set a goal.
-- Ties FR-03 and FR-04 together in a natural workflow.
+- Remaining calories extend the totals view.
+- The detail appears only when a goal exists.
+- Links FR-03 and FR-04.
 
 **Search Food Items → Add Food Item**
-- When the catalogue does not contain a suitable match, the user can create a new food entry.
-- This keeps meal logging moving without forcing the user to stop at a search failure.
-- Supports FR-07 and FR-13 together.
+- When no suitable match exists, the user may create a new food entry.
+- This keeps meal logging moving without interruption.
+- Supports FR-07 and FR-13.
 
 ### Generalization Relationships (→ initiates)
 **Busy Professional generalizes Primary User**
 - Both follow the same core meal logging flow.
 - Busy Professional emphasises speed, while Primary User emphasises simplicity.
-- Both can perform the same use cases but with different performance expectations.
+- Both perform the same use cases with different performance expectations.
 
 ---
 
@@ -114,8 +114,8 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 | Stakeholder | Key Concern | Addressed By Use Cases |
 |---|---|---|
-| Fitness Enthusiast | Quick meal logging, accurate totals | Create Meal Log, View Daily Totals, Display Remaining Calories, Add Food Item |
-| Professional Athlete | Precision, fast entry, reliable totals | Search Food Items, Create Meal Log, Add Food Item, View Daily Totals |
+| Fitness Enthusiast | Quick meal logging and accurate totals | Create Meal Log, View Daily Totals, Display Remaining Calories, Add Food Item |
+| Professional Athlete | Precision, fast entry, and reliable totals | Search Food Items, Create Meal Log, Add Food Item, View Daily Totals |
 | Nutritionist | Reliable summaries and trend analysis | View Meal History, Generate Summaries & Export |
 | Fitness Coach | Progress monitoring and actionable summaries | View Meal History, View Daily Totals, Generate Summaries & Export |
 | Personal Chef | Portion planning and dietary alignment | View Meal History, Generate Summaries & Export |
@@ -130,7 +130,7 @@ The use case diagram is embedded below as an SVG image so it renders consistentl
 
 ## 5. Requirements Traceability
 
-Each use case is mapped to one or more functional requirements (FR) from `SYSTEM_REQUIREMENTS.md`:
+Each use case is mapped to one or more functional requirements from `SYSTEM_REQUIREMENTS.md`:
 
 | Use Case | FR ID(s) | Description |
 |---|---|---|
@@ -157,12 +157,12 @@ Each use case is mapped to one or more functional requirements (FR) from `SYSTEM
 - **Extended stakeholders:** Nutrition NGOs, Healthy Food Supplier, and Advertiser are retained for completeness and future expansion.
 
 ### Why 12 Use Cases?
-- **Core workflows (9):** Meal logging, search, validation, catalogue maintenance, viewing, editing, goals, summaries
-- **Support workflows (3):** Environment setup, documentation, configuration
-- Each use case maps to one or more functional requirements, ensuring complete coverage
+- **Core workflows (9):** Meal logging, search, validation, catalogue maintenance, viewing, editing, goals, and summaries
+- **Support workflows (3):** Environment setup, documentation, and configuration
+- Each use case maps to one or more functional requirements, ensuring coverage
 
 ### Inclusion vs. Extension
-- **Inclusion** (meal log → search, meal log → validate) enforces that certain steps always happen together
-- **Extension** (totals → remaining calories) shows optional but natural workflow enhancements
-- This design prevents duplicate specifications while keeping flows clear
+- **Inclusion** (meal log → search, meal log → validate) enforces required steps.
+- **Extension** (totals → remaining calories) captures an optional but natural enhancement.
+- This design avoids duplication while keeping the flows clear.
 

@@ -27,23 +27,32 @@ The source code follows the documented domain and class model:
 
 - `src/domain/` contains the class implementations (`UserProfile`, `FoodCatalogue`, `FoodItem`, `MealLog`, `MealEntry`, `NutritionGoal`, `NutritionSummary`).
 - `src/creational_patterns/` contains all six creational pattern implementations.
-- `tests/` contains unit tests for domain rules and each creational pattern.
+- `src/repositories/` contains generic repository contracts, in-memory implementations, backend stubs, and factory-based storage selection.
+- `tests/` contains unit tests for domain rules, creational patterns, and repository behavior.
 
 ### Language and Design Choices
 
 - **TypeScript** is used to preserve strong type safety and match the existing Next.js project stack.
 - Domain classes use private fields with focused methods aligned to the class diagram and requirements traceability.
-- Business rules from the domain model are enforced in constructors and guard methods (duplicate detection, positive portions, required entries, and valid goals).
-- The implementation separates domain logic from pattern examples to keep responsibilities clear.
+- Business rules from the domain model are enforced in constructors and guard methods.
+- The implementation separates domain logic, object-creation patterns, and persistence abstractions.
 
 ### Creational Pattern Rationale
 
 - **Simple Factory:** `FoodItemSimpleFactory` centralizes creation of standard and custom food items.
 - **Factory Method:** `SummaryExporterCreator` delegates exporter construction to concrete creators for CSV or JSON output.
-- **Abstract Factory:** Dashboard widget families (`MobileDashboardWidgetFactory`, `WebDashboardWidgetFactory`) create related UI components consistently.
+- **Abstract Factory:** Dashboard widget families create related UI components consistently.
 - **Builder:** `MealLogBuilder` constructs meal logs step by step and validates required elements.
 - **Prototype:** `FoodItemPrototypeRegistry` clones preconfigured food templates for fast reuse.
 - **Singleton:** `DatabaseConnection` ensures one shared connection instance, including async-safe initialization.
+
+### Repository Layer Rationale
+
+- **Generic repository contract:** avoids CRUD duplication across entities.
+- **Entity-specific interfaces:** preserve domain-specific query semantics such as `findByName` and `findByDateRange`.
+- **In-memory repositories:** support fast local testing through `Map`-based storage.
+- **Factory-based storage switching:** `RepositoryFactory` enables runtime backend selection with minimal calling-code impact.
+- **Future backend stubs:** reserve integration points for SQL/NoSQL/API storage adapters.
 
 ## Running Tests and Coverage
 
@@ -77,6 +86,8 @@ Project documentation can be found in the following files:
 - 🖼️ [Domain Model Figure](docs/domain-model.svg)
 - 🧩 [Class Diagram](docs/CLASS_DIAGRAM.md)
 - 🖼️ [Class Diagram Figure](docs/class-diagram.svg)
+- 🗄️ [Repository Layer](docs/REPOSITORY_LAYER.md)
+- 🧾 [Project Issues Backlog](docs/PROJECT_ISSUES_BACKLOG.md)
 - 🧭 [Object State Model](docs/OBJECT_STATE_MODEL.md)
 - 🖼️ [Object State Model Figure](docs/object-state-model.svg)
 - 🔄 [Activity Workflow Model](docs/ACTIVITY_WORKFLOW_MODEL.md)
@@ -87,20 +98,6 @@ Project documentation can be found in the following files:
 - 📋 [Kanban Board Explanation](docs/KANBAN_EXPLANATION.md)
 - 🖼️ [Kanban Board Illustration](docs/kanban_board.svg)
 - 🧠 [Reflection](docs/REFLECTION.md)
-
-## GitHub Project Documentation
-
-The repository also includes documentation for the GitHub Projects workflow used to support Agile delivery of the Calorie Tracker App.
-
-- The **template analysis** compares available GitHub Project templates and justifies the selected approach.
-- The **template comparison figure** summarises the template options presented in the report.
-- The **Kanban explanation** describes the board structure, work-in-progress limits, and workflow logic.
-- The **Kanban board illustration** is provided as an SVG asset for direct embedding.
-- The **domain model** defines the principal entities, business rules, and traceability links.
-- The **class diagram** presents the object-oriented structure in Mermaid.js and is paired with an SVG export.
-- The **object state model** documents key lifecycle transitions for the core application artefacts.
-- The **activity workflow model** describes the principal operational flows using UML-style diagrams.
-- The **SVG figures** provide visual exports for convenient review and presentation.
 
 ## Project Status
 🚧 This project is currently under development.

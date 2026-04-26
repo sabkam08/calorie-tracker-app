@@ -11,16 +11,19 @@
     "test": "node --import tsx --test tests/**/*.test.ts",
     "test:watch": "node --watch --import tsx --test tests/**/*.test.ts",
     "coverage": "node --import tsx --test --experimental-test-coverage tests/**/*.test.ts",
-    "demo": "tsx src/demo.ts"
+    "demo": "tsx src/demo.ts",
+    "db:check": "tsx src/scripts/checkPostgresConnection.ts"
   },
   "dependencies": {
     "next": "16.2.4",
+    "pg": "^8.20.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.15.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

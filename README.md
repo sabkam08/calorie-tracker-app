@@ -54,6 +54,27 @@ The source code follows the documented domain and class model:
 - **Factory-based storage switching:** `RepositoryFactory` enables runtime backend selection with minimal calling-code impact.
 - **Future backend stubs:** reserve integration points for SQL/NoSQL/API storage adapters.
 
+### PostgreSQL Connection Setup
+
+The repository layer now includes reusable PostgreSQL connection logic in `src/repositories/database/`.
+
+Required environment variable:
+
+- `DATABASE_URL` (example: `postgresql://user:password@localhost:5432/calorie_tracker`)
+
+Optional environment variables:
+
+- `PGSSL_MODE` (`disable`, `require`, or `no-verify`)
+- `PG_POOL_MAX` (default `10`)
+- `PG_IDLE_TIMEOUT_MS` (default `30000`)
+- `PG_CONNECT_TIMEOUT_MS` (default `5000`)
+
+Run a quick connectivity check:
+
+```bash
+npm run db:check
+```
+
 ## Running Tests and Coverage
 
 ```bash

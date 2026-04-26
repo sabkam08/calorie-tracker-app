@@ -1,7 +1,13 @@
 import { FoodItem } from "@/domain";
+import { queryPostgres } from "@/repositories/database";
 import { FoodItemRepository } from "@/repositories/contracts";
 
 export class DatabaseFoodItemRepository implements FoodItemRepository {
+  async ping(): Promise<boolean> {
+    const rows = await queryPostgres<{ ok: number }>("SELECT 1 AS ok");
+    return rows[0]?.ok === 1;
+  }
+
   save(_entity: FoodItem): void {
     throw new Error("DatabaseFoodItemRepository.save is not implemented yet.");
   }
@@ -22,4 +28,3 @@ export class DatabaseFoodItemRepository implements FoodItemRepository {
     throw new Error("DatabaseFoodItemRepository.findByName is not implemented yet.");
   }
 }
-

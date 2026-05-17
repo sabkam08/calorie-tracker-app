@@ -1,0 +1,494 @@
+openapi: 3.1.0
+info:
+  title: Calorie Tracker App API
+  version: 1.0.0
+  description: REST API for food items, meal logs, nutrition goals, and summary snapshots.
+servers:
+  - url: http://localhost:3000
+paths:
+  /api/food-items:
+    get:
+      summary: Search food items
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          description: Optional search term.
+      responses:
+        "200":
+          description: List of food items
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodItemListResponse'
+    post:
+      summary: Create a food item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FoodItemInput'
+      responses:
+        "201":
+          description: Food item created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodItemResponse'
+        "400":
+          $ref: '#/components/responses/ValidationError'
+        "409":
+          $ref: '#/components/responses/ConflictError'
+  /api/food-items/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Fetch a food item by id
+      responses:
+        "200":
+          description: Food item response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodItemResponse'
+        "404":
+          $ref: '#/components/responses/NotFoundError'
+    put:
+      summary: Update a food item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FoodItemUpdateInput'
+      responses:
+        "200":
+          description: Food item updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodItemResponse'
+        "404":
+          $ref: '#/components/responses/NotFoundError'
+        "409":
+          $ref: '#/components/responses/ConflictError'
+    delete:
+      summary: Delete a food item
+      responses:
+        "200":
+          description: Deletion confirmation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteResponse'
+        "404":
+          $ref: '#/components/responses/NotFoundError'
+        "400":
+          $ref: '#/components/responses/ValidationError'
+  /api/meal-logs:
+    get:
+      summary: List meal logs
+      parameters:
+        - in: query
+          name: mealType
+          schema:
+            type: string
+        - in: query
+          name: start
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: end
+          schema:
+            type: string
+            format: date-time
+      responses:
+        "200":
+          description: Meal log list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MealLogListResponse'
+    post:
+      summary: Create a meal log
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MealLogInput'
+      responses:
+        "201":
+          description: Meal log created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MealLogResponse'
+        "400":
+          $ref: '#/components/responses/ValidationError'
+        "404":
+          $ref: '#/components/responses/NotFoundError'
+  /api/meal-logs/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Fetch a meal log by id
+      responses:
+        "200":
+          description: Meal log response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MealLogResponse'
+        "404":
+          $ref: '#/components/responses/NotFoundError'
+    put:
+      summary: Update a meal log
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MealLogUpdateInput'
+      responses:
+        "200":
+          description: Meal log updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MealLogResponse'
+        "404":
+          $ref: '#/components/responses/NotFoundError'
+    delete:
+      summary: Delete a meal log
+      responses:
+        "200":
+          description: Deletion confirmation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteResponse'
+        "404":
+          $ref: '#/components/responses/NotFoundError'
+  /api/nutrition-goals:
+    get:
+      summary: Fetch the current nutrition goal
+      responses:
+        "200":
+          description: Current goal response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NutritionGoalEnvelope'
+    post:
+      summary: Create a nutrition goal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NutritionGoalInput'
+      responses:
+        "201":
+          description: Goal created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NutritionGoalEnvelope'
+    put:
+      summary: Update the current nutrition goal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NutritionGoalUpdateInput'
+      responses:
+        "200":
+          description: Goal updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NutritionGoalEnvelope'
+    delete:
+      summary: Delete the current nutrition goal
+      responses:
+        "200":
+          description: Deletion confirmation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteResponse'
+  /api/nutrition-goals/summary:
+    get:
+      summary: Build a nutrition summary for a date or range
+      parameters:
+        - in: query
+          name: date
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: start
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: end
+          schema:
+            type: string
+            format: date-time
+      responses:
+        "200":
+          description: Summary response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NutritionSummaryEnvelope'
+components:
+  responses:
+    ValidationError:
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFoundError:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    ConflictError:
+      description: Conflict error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required: [error]
+    DeleteResponse:
+      type: object
+      properties:
+        deleted:
+          type: boolean
+      required: [deleted]
+    FoodItemInput:
+      type: object
+      required: [name, servingSize, caloriesPerServing, proteinGrams, carbohydrateGrams, fatGrams]
+      properties:
+        name:
+          type: string
+        servingSize:
+          type: string
+        caloriesPerServing:
+          type: number
+        proteinGrams:
+          type: number
+        carbohydrateGrams:
+          type: number
+        fatGrams:
+          type: number
+        sourceType:
+          type: string
+          enum: [standard, custom]
+    FoodItemUpdateInput:
+      type: object
+      properties:
+        name:
+          type: string
+        servingSize:
+          type: string
+        caloriesPerServing:
+          type: number
+        proteinGrams:
+          type: number
+        carbohydrateGrams:
+          type: number
+        fatGrams:
+          type: number
+        sourceType:
+          type: string
+          enum: [standard, custom]
+    FoodItemResponse:
+      allOf:
+        - $ref: '#/components/schemas/FoodItemInput'
+        - type: object
+          properties:
+            foodId:
+              type: string
+          required: [foodId]
+    FoodItemListResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/FoodItemResponse'
+      required: [items]
+    MealLogInput:
+      type: object
+      required: [mealType, foodItemId, portionSize]
+      properties:
+        mealType:
+          type: string
+        foodItemId:
+          type: string
+        portionSize:
+          type: number
+        notes:
+          type: string
+        entryDate:
+          type: string
+          format: date-time
+    MealLogUpdateInput:
+      type: object
+      properties:
+        mealType:
+          type: string
+        foodItemId:
+          type: string
+        portionSize:
+          type: number
+        notes:
+          type: string
+        entryDate:
+          type: string
+          format: date-time
+    MealEntryResponse:
+      type: object
+      properties:
+        entryId:
+          type: string
+        portionSize:
+          type: number
+        calories:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+        foodItem:
+          $ref: '#/components/schemas/FoodItemResponse'
+      required: [entryId, portionSize, calories, createdAt, foodItem]
+    MealLogResponse:
+      type: object
+      properties:
+        mealLogId:
+          type: string
+        entryDate:
+          type: string
+          format: date-time
+        mealType:
+          type: string
+        notes:
+          type: string
+        totalCalories:
+          type: number
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/MealEntryResponse'
+      required: [mealLogId, entryDate, mealType, notes, totalCalories, entries]
+    MealLogListResponse:
+      type: object
+      properties:
+        mealLogs:
+          type: array
+          items:
+            $ref: '#/components/schemas/MealLogResponse'
+      required: [mealLogs]
+    NutritionGoalInput:
+      type: object
+      required: [dailyCalorieTarget, proteinTarget, carbohydrateTarget, fatTarget]
+      properties:
+        dailyCalorieTarget:
+          type: number
+        proteinTarget:
+          type: number
+        carbohydrateTarget:
+          type: number
+        fatTarget:
+          type: number
+        effectiveDate:
+          type: string
+          format: date-time
+    NutritionGoalUpdateInput:
+      type: object
+      properties:
+        dailyCalorieTarget:
+          type: number
+        proteinTarget:
+          type: number
+        carbohydrateTarget:
+          type: number
+        fatTarget:
+          type: number
+        effectiveDate:
+          type: string
+          format: date-time
+    NutritionGoalResponse:
+      type: object
+      properties:
+        goalId:
+          type: string
+        dailyCalorieTarget:
+          type: number
+        proteinTarget:
+          type: number
+        carbohydrateTarget:
+          type: number
+        fatTarget:
+          type: number
+        effectiveDate:
+          type: string
+          format: date-time
+      required: [goalId, dailyCalorieTarget, proteinTarget, carbohydrateTarget, fatTarget, effectiveDate]
+    NutritionGoalEnvelope:
+      type: object
+      properties:
+        goal:
+          oneOf:
+            - $ref: '#/components/schemas/NutritionGoalResponse'
+            - type: "null"
+      required: [goal]
+    NutritionSummaryResponse:
+      type: object
+      properties:
+        summaryId:
+          type: string
+        periodStart:
+          type: string
+          format: date-time
+        periodEnd:
+          type: string
+          format: date-time
+        totalCalories:
+          type: number
+        remainingCalories:
+          type: number
+        mealCount:
+          type: integer
+      required: [summaryId, periodStart, periodEnd, totalCalories, remainingCalories, mealCount]
+    NutritionSummaryEnvelope:
+      type: object
+      properties:
+        summary:
+          $ref: '#/components/schemas/NutritionSummaryResponse'
+      required: [summary]
+

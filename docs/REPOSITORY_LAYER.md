@@ -52,6 +52,13 @@ A factory-based selection mechanism is implemented in `src/repositories/factory/
 
 This approach keeps construction logic centralized and makes backend switching explicit.
 
+## 4. Service and API Consumers
+
+The repository layer is consumed by the application services in `src/services/`, which in turn power the REST handlers in `src/app/api/`.
+
+- Services validate inputs, enforce business rules, and coordinate multiple repositories when needed.
+- API routes remain thin and only translate HTTP requests into service calls and JSON responses.
+
 ## 5. Future-Proofing
 
 A future database backend stub is provided:

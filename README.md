@@ -28,6 +28,8 @@ The source code follows the documented domain and class model:
 - `src/domain/` contains the class implementations (`UserProfile`, `FoodCatalogue`, `FoodItem`, `MealLog`, `MealEntry`, `NutritionGoal`, `NutritionSummary`).
 - `src/creational_patterns/` contains all six creational pattern implementations.
 - `src/repositories/` contains generic repository contracts, in-memory implementations, backend stubs, and factory-based storage selection.
+- `src/services/` contains business services for food items, meal logs, and nutrition goals.
+- `src/app/api/` contains REST route handlers that expose the services through JSON endpoints.
 - `tests/` contains unit tests for domain rules, creational patterns, and repository behavior.
 
 ### Language and Design Choices
@@ -53,6 +55,14 @@ The source code follows the documented domain and class model:
 - **In-memory repositories:** support fast local testing through `Map`-based storage.
 - **Factory-based storage switching:** `RepositoryFactory` enables runtime backend selection with minimal calling-code impact.
 - **Future backend stubs:** reserve integration points for SQL/NoSQL/API storage adapters.
+
+### Service Layer and REST API
+
+- **Food item services:** support search, creation, update, and safe deletion rules.
+- **Meal log services:** validate input, persist logs, and refresh summary snapshots.
+- **Nutrition goal services:** manage the current target and compute dashboard summaries.
+- **REST API routes:** expose these capabilities under `/api/food-items`, `/api/meal-logs`, and `/api/nutrition-goals`.
+- **OpenAPI document:** `docs/openapi.yaml` defines request and response schemas for the API.
 
 ### PostgreSQL Connection Setup
 
@@ -118,6 +128,8 @@ Project documentation can be found in the following files:
 - 🖼️ [Template Comparison Figure](docs/template_comparison.svg)
 - 📋 [Kanban Board Explanation](docs/KANBAN_EXPLANATION.md)
 - 🖼️ [Kanban Board Illustration](docs/kanban_board.svg)
+- 🧪 [Service Layer and REST API](docs/SERVICE_AND_API.md)
+- 📜 [OpenAPI Specification](docs/openapi.yaml)
 - 🧠 [Reflection](docs/REFLECTION.md)
 
 ## Project Status

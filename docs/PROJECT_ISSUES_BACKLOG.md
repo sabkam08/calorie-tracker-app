@@ -17,7 +17,21 @@
 | REPO-11 | Document persistence layer architecture | Documentation | Medium | Done | `docs/REPOSITORY_LAYER.md` |
 | REPO-12 | Update class diagram with repository layer | Documentation | Medium | Done | `docs/CLASS_DIAGRAM.md` |
 
-## 2. Next Iteration Candidates
+## 2. Service and API Work Items
+
+| Issue ID | Title | Type | Priority | Status | Scope |
+|---|---|---|---|---|---|
+| API-01 | Define food-item service logic | Feature | High | Done | `src/services/FoodItemService.ts` |
+| API-02 | Define meal-log service logic | Feature | High | Done | `src/services/MealLogService.ts` |
+| API-03 | Define nutrition-goal service logic | Feature | High | Done | `src/services/NutritionGoalService.ts` |
+| API-04 | Add shared API error handling | Feature | High | Done | `src/app/api/_lib.ts` |
+| API-05 | Add food-item REST routes | Feature | High | Done | `src/app/api/food-items/*` |
+| API-06 | Add meal-log REST routes | Feature | High | Done | `src/app/api/meal-logs/*` |
+| API-07 | Add nutrition-goal REST routes | Feature | High | Done | `src/app/api/nutrition-goals/*` |
+| API-08 | Add OpenAPI documentation | Documentation | Medium | Done | `docs/openapi.yaml` |
+| API-09 | Add service/API test coverage | Test | High | Done | `tests/services/*`, `tests/api/*` |
+
+## 3. Next Iteration Candidates
 
 | Issue ID | Title | Type | Priority | Notes |
 |---|---|---|---|---|

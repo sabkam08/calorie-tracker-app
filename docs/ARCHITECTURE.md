@@ -32,6 +32,12 @@ The application uses a repository abstraction to decouple storage concerns from 
 
 This design supports fast in-memory testing today and controlled migration to SQL/NoSQL/API backends later.
 
+### Application Service Layer
+
+- `src/services/` contains the business logic for food items, meal logs, and nutrition goals.
+- `src/app/api/` exposes the services through REST route handlers.
+- The API layer uses the repository layer through service orchestration rather than accessing storage directly.
+
 ---
 
 # C4 Architectural Diagrams

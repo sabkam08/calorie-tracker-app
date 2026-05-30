@@ -1,12 +1,9 @@
-import "server-only";
-
 import { Pool, type QueryResultRow } from "pg";
 
-import { getPostgresConfig } from "./PostgresConfig";
+import { getPostgresConfig } from "@/repositories/database/PostgresConfig";
 
 declare global {
   // Keep one pool during local HMR to avoid opening excess clients.
-  // eslint-disable-next-line no-var
   var __calorieTrackerPgPool: Pool | undefined;
 }
 

@@ -5,7 +5,7 @@ import { GET as getFoodItems, POST as postFoodItem } from "@/app/api/food-items/
 import { DELETE as deleteFoodItem, GET as getFoodItem, PUT as putFoodItem } from "@/app/api/food-items/[id]/route";
 import { DELETE as deleteGoal, GET as getGoal, POST as postGoal, PUT as putGoal } from "@/app/api/nutrition-goals/route";
 import { GET as getSummary } from "@/app/api/nutrition-goals/summary/route";
-import { DELETE as deleteMealLog, GET as getMealLog, POST as postMealLog, PUT as putMealLog } from "@/app/api/meal-logs/[id]/route";
+import { DELETE as deleteMealLog, GET as getMealLog, PUT as putMealLog } from "@/app/api/meal-logs/[id]/route";
 import { GET as getMealLogs, POST as postMealLogs } from "@/app/api/meal-logs/route";
 import { resetApplicationServices } from "@/services";
 

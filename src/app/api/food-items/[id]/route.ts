@@ -7,8 +7,9 @@ type RouteContext = {
   params: Promise<{ id: string }> | { id: string };
 };
 
-export async function GET(_request: Request, context: RouteContext) {
+export async function GET(request: Request, context: RouteContext) {
   try {
+    void request;
     const { id } = await context.params;
     const foodItem = getApplicationServices().foodItems.getFoodItem(id);
     return NextResponse.json({ foodItem });
@@ -28,8 +29,9 @@ export async function PUT(request: Request, context: RouteContext) {
   }
 }
 
-export async function DELETE(_request: Request, context: RouteContext) {
+export async function DELETE(request: Request, context: RouteContext) {
   try {
+    void request;
     const { id } = await context.params;
     getApplicationServices().foodItems.deleteFoodItem(id);
     return NextResponse.json({ deleted: true });

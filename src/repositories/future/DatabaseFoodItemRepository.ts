@@ -1,18 +1,14 @@
 import { FoodItem } from "@/domain";
-import { queryPostgres } from "@/repositories/database";
 import { FoodItemRepository } from "@/repositories/contracts";
 
 export class DatabaseFoodItemRepository implements FoodItemRepository {
-  async ping(): Promise<boolean> {
-    const rows = await queryPostgres<{ ok: number }>("SELECT 1 AS ok");
-    return rows[0]?.ok === 1;
-  }
-
-  save(_entity: FoodItem): void {
+  save(entity: FoodItem): void {
+    void entity;
     throw new Error("DatabaseFoodItemRepository.save is not implemented yet.");
   }
 
-  findById(_id: string): FoodItem | undefined {
+  findById(id: string): FoodItem | undefined {
+    void id;
     throw new Error("DatabaseFoodItemRepository.findById is not implemented yet.");
   }
 
@@ -20,11 +16,13 @@ export class DatabaseFoodItemRepository implements FoodItemRepository {
     throw new Error("DatabaseFoodItemRepository.findAll is not implemented yet.");
   }
 
-  delete(_id: string): void {
+  delete(id: string): void {
+    void id;
     throw new Error("DatabaseFoodItemRepository.delete is not implemented yet.");
   }
 
-  findByName(_query: string): FoodItem[] {
+  findByName(query: string): FoodItem[] {
+    void query;
     throw new Error("DatabaseFoodItemRepository.findByName is not implemented yet.");
   }
 }

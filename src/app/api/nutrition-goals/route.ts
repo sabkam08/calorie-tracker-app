@@ -3,8 +3,9 @@ import { NextResponse } from "next/server";
 import { getApplicationServices, NutritionGoalInput, UpdateNutritionGoalInput } from "@/services";
 import { handleApiError, readJsonBody } from "../_lib";
 
-export async function GET(_request: Request) {
+export async function GET(request: Request) {
   try {
+    void request;
     const goal = getApplicationServices().nutritionGoals.getCurrentNutritionGoal();
     return NextResponse.json({ goal });
   } catch (error) {
@@ -32,8 +33,9 @@ export async function PUT(request: Request) {
   }
 }
 
-export async function DELETE(_request: Request) {
+export async function DELETE(request: Request) {
   try {
+    void request;
     getApplicationServices().nutritionGoals.deleteCurrentNutritionGoal();
     return NextResponse.json({ deleted: true });
   } catch (error) {

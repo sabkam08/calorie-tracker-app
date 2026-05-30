@@ -33,12 +33,25 @@ Open the following issues in GitHub and link each one to the relevant branch, pu
 
 ## 4. Recommended Order of Work
 1. Add the GitHub Actions workflow file.
+   This is the automation file that defines the CI/CD pipeline for the repository. It should be created at `.github/workflows/ci.yml` and configured to run the project checks on every push and pull request, then produce a release artifact after successful merges to `main`. The task can be achieved by using the existing npm scripts in `package.json` so that the workflow mirrors the same quality checks used locally.
+
 2. Run the local verification commands until they pass.
+   This step confirms that the codebase is stable before branch rules and automated enforcement are treated as authoritative. It should be completed by running `npm ci`, `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build` in the project root. If any command fails, the corresponding code, test, or configuration issue should be corrected before moving forward.
+
 3. Configure branch protection for `main`.
+   This is the repository safeguard that prevents direct pushes and ensures that changes are reviewed before they reach the primary branch. It can be achieved in GitHub under **Settings → Branches → Branch protection rules** by requiring at least one pull request review, requiring the CI status checks to pass, and blocking direct pushes to `main`. Optional protections such as dismissing stale reviews and requiring resolved conversations can also be enabled for stricter control.
+
 4. Open a pull request and confirm that failing checks block merge.
+   This step validates that the branch protection rule is working correctly in practice. It can be achieved by creating a feature branch, introducing a deliberate failing change, and opening a pull request against `main`. The workflow should fail, the required status checks should remain red, and GitHub should prevent the merge until the issue is fixed and the checks pass again.
+
 5. Merge a successful pull request and confirm the release artifact uploads.
+   This step verifies the delivery side of the pipeline after the code has passed review and testing. It can be achieved by pushing a corrected branch, allowing the workflow to pass, and then merging the pull request into `main`. After the merge, the GitHub Actions run should show the artifact job completing successfully and the uploaded release package should be visible under the workflow run artifacts.
+
 6. Capture screenshots for each required proof point.
+   This step creates the evidence needed for submission and review. It can be achieved by saving screenshots of the branch protection settings, a pull request blocked by failing checks, a successful workflow run, and the uploaded artifact. Each screenshot should clearly show the repository name, the relevant check or rule, and the status so that the proof is easy to verify later.
+
 7. Update the README and branch protection guidance.
+   This final step ensures that the repository documentation explains the completed automation setup. It can be achieved by adding a short CI/CD section to `README.md` that describes local verification commands, the workflow behaviour, and the purpose of the release artifact, while `docs/PROTECTION.md` should explain why the branch protection rules exist and how they support quality control.
 
 ## 5. GitHub Issue Body Drafts
 Use the following structure when opening each issue.

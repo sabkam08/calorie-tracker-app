@@ -95,6 +95,36 @@ npm run coverage
 The coverage command generates terminal output and an HTML report under `coverage/`.
 Reference notes for coverage execution are available in `tests/COVERAGE_REPORT.md`.
 
+## CI/CD Workflow
+
+The repository includes a GitHub Actions workflow at `.github/workflows/ci.yml`.
+
+### How the pipeline works
+- **On push to any branch:** the workflow runs linting, type checking, automated tests, and a production build.
+- **On pull requests to `main`:** the same checks run before merge is allowed.
+- **On push to `main`:** after the verification job passes, the workflow packages a release artifact and uploads it to the GitHub Actions run.
+
+### Why CI/CD matters
+CI/CD automates quality checks and release packaging. It helps the project by:
+- catching mistakes early,
+- preventing broken changes from reaching `main`,
+- proving that the app still builds after each change,
+- and creating a repeatable release package.
+
+### Future uses of CI/CD
+This pipeline can later support preview deployments, dependency updates, security scanning, release tagging, and rollback-friendly build artifacts.
+
+### Local verification before pushing
+Run the same checks locally before opening a pull request:
+
+```bash
+npm ci
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
+
 ## Demo Runner
 
 ```bash
@@ -131,6 +161,8 @@ Project documentation can be found in the following files:
 - 🧪 [Service Layer and REST API](docs/SERVICE_AND_API.md)
 - 📜 [OpenAPI Specification](docs/openapi.yaml)
 - 🧠 [Reflection](docs/REFLECTION.md)
+- 🧾 [CI/CD Issues Tracker](docs/CI_CD_ISSUES_TRACKER.md)
+- 🛡️ [Branch Protection Guide](docs/PROTECTION.md)
 
 ## Project Status
 🚧 This project is currently under development.

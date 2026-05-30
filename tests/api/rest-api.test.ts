@@ -10,13 +10,16 @@ import { GET as getMealLogs, POST as postMealLogs } from "@/app/api/meal-logs/ro
 import { resetApplicationServices } from "@/services";
 
 function jsonRequest(url: string, body?: unknown, init: RequestInit = {}): Request {
+  const method = init.method ?? (body === undefined ? "GET" : "POST");
+  const hasBody = body !== undefined && method !== "GET" && method !== "HEAD";
   return new Request(url, {
     ...init,
+    method,
     headers: {
       "content-type": "application/json",
       ...(init.headers ?? {}),
     },
-    body: body === undefined ? undefined : JSON.stringify(body),
+    body: hasBody ? JSON.stringify(body) : undefined,
   });
 }
 

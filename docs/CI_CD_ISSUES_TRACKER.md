@@ -160,3 +160,31 @@ This makes the evidence easier to review and demonstrates that the pipeline is a
 - **README summary:** `README.md`
 - **Local checks:** lint, type check, tests, build
 
+## 11. Assignment 14 Peer Review and Onboarding Issue Plan
+
+Open the following GitHub issues to prepare the repository for peer review and external contributions.
+
+| Issue ID | GitHub Issue Title | Purpose | Acceptance Criteria | Label |
+|---|---|---|---|---|
+| PR-01 | Add contributor onboarding guide | Help new contributors understand setup and pull request flow | `CONTRIBUTING.md` explains prerequisites, install steps, coding standards, issue selection, and PR steps | `good-first-issue` |
+| PR-02 | Create repository roadmap | Show future work and improvement areas | `ROADMAP.md` lists short-term, medium-term, and future ideas for the project | `feature-request` |
+| PR-03 | Add an open-source license | Make the repository reusable and shareable | A valid `LICENSE` file is committed at the repository root | `good-first-issue` |
+| PR-04 | Add peer voting and engagement tracking | Record stars, forks, and feedback after sharing the repo | `VOTING_RESULTS.md` contains the repo link, counts, and summary observations | `feature-request` |
+| PR-05 | Update README onboarding content | Make the repository easier to join and review | `README.md` includes getting started steps, contribution links, and feature areas for contributors | `good-first-issue` |
+| PR-06 | Add reflection on collaboration and onboarding | Capture lessons learned from peer review | `REFLECTION.md` includes a peer review and open-source collaboration reflection section | `feature-request` |
+| PR-07 | Label newcomer-friendly issues | Help classmates find simple tasks quickly | At least five issues are tagged `good-first-issue` and at least three are tagged `feature-request` | `good-first-issue` |
+| PR-08 | Improve documentation clarity | Make the repository easier for first-time contributors to navigate | A small doc cleanup issue is created and labeled `good-first-issue` | `good-first-issue` |
+
+### Suggested label mapping
+- `good-first-issue`: PR-01, PR-03, PR-05, PR-07, PR-08.
+- `feature-request`: PR-02, PR-04, PR-06, and one larger enhancement issue such as repository or API expansion.
+
+### Recommended order for Assignment 14
+1. Create `CONTRIBUTING.md` so peers know how to start.
+2. Add `ROADMAP.md` so contributors can see future directions.
+3. Commit the `LICENSE` file so the repository is clearly shareable.
+4. Update `README.md` with onboarding and contribution sections.
+5. Add `VOTING_RESULTS.md` after the repository is shared.
+6. Add the peer review reflection to `REFLECTION.md`.
+7. Apply the GitHub labels to the selected issues and capture proof for submission.
+
